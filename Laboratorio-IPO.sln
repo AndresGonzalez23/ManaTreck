@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio-IPO", "Laboratorio-IPO\Laboratorio-IPO.csproj", "{99699819-2632-455D-BB19-D9A89551A680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99699819-2632-455D-BB19-D9A89551A680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99699819-2632-455D-BB19-D9A89551A680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99699819-2632-455D-BB19-D9A89551A680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99699819-2632-455D-BB19-D9A89551A680}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57F5DD4D-E040-49C6-BF4D-088B03EAC8D5}
+	EndGlobalSection
+EndGlobal

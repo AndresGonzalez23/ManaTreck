@@ -103,13 +103,19 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\candado-cerrado.png" />
-    <Resource Include="Imagenes\Icono.png" />
+    <Resource Include="Imagenes\icono.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\fondoInicio.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\fotoUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\usuarioFoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\iconoOpcional.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

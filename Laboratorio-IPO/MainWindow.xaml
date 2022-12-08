@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratorio_IPO"
         mc:Ignorable="d"
-        Title="Login" Height="500" Width="800" WindowStartupLocation="CenterScreen"
-        HorizontalContentAlignment="Stretch"
-        VerticalContentAlignment="Stretch"
-        MinHeight="650" MinWidth="1100">
+        Title="Login" 
+        Height="500" Width="800" 
+        HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+        MinHeight="650" MinWidth="1100"
+        WindowStartupLocation="CenterScreen">
 
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
@@ -62,7 +63,7 @@
                  VerticalContentAlignment="Center"
                  Margin="0,1,5,5"
                  BorderThickness="2"
-                 TextWrapping="Wrap"/>
+                 TextWrapping="Wrap" KeyDown="txtUsuario_KeyDown"/>
         <Image x:Name="imgUsuario" 
                Grid.Column="2" Grid.Row="5"
                HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -73,12 +74,14 @@
                FontSize="20"
                HorizontalContentAlignment="Stretch" VerticalContentAlignment="Bottom"
                Margin="12,1,41,1"/>
-        <TextBox x:Name="txtContrasena" 
+        <PasswordBox x:Name="txtContrasena" 
                  Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="4" 
                  VerticalContentAlignment="Center"
                  Margin="2,4,3,4"
                  BorderThickness="2"
-                 TextWrapping="Wrap"/>
+                 PasswordChar="*"
+                 IsEnabled="False"
+                 KeyUp="txtContrasena_KeyUp"/>
         <Image x:Name="imgContrasena" 
                Grid.Column="2" Grid.Row="8"
                HorizontalAlignment="Right" VerticalAlignment="Top"
@@ -92,14 +95,14 @@
                />
         <Image x:Name="imgLogo" 
                Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2"
-               Source="/Imagenes/Icono.png" 
+               Source="/Imagenes/icono.png" 
                Stretch="Fill"
                Margin="12,0,12,0" VerticalAlignment="Center"
                />
-        <Button Grid.Column="3" Grid.Row="10" Grid.ColumnSpan="2" 
+        <Button x:Name="btnLogin" Grid.Column="3" Grid.Row="10" Grid.ColumnSpan="2" 
                 Content="Aceptar" FontSize="15"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
-                Height="34" Width="102"/>
+                Height="34" Width="102" Click="btnLogin_Click"/>
 
     </Grid>
 </Window>

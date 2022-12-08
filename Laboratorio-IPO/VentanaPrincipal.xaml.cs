@@ -23,5 +23,10 @@ namespace Laboratorio_IPO
         {
             InitializeComponent();
         }
+
+        private void Ventana_Principal_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
+        }
     }
 }

@@ -9,7 +9,7 @@
         Height="500" Width="800" 
         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
         MinHeight="650" MinWidth="1100"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Closing="VentanaLogin_Closing">
 
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>

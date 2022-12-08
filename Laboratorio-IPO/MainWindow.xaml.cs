@@ -95,5 +95,10 @@ namespace Laboratorio_IPO
                 this.Visibility = Visibility.Hidden;
             }
         }
+
+        private void VentanaLogin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
+        }
     }
 }

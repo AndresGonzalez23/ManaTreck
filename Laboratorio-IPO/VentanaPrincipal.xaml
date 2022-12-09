@@ -29,18 +29,15 @@
         </Rectangle>
         <StackPanel x:Name="barra" Orientation="Horizontal" Background="#867628" Margin="2,0,0,0" FlowDirection="RightToLeft" Grid.ColumnSpan="3">
             <Button x:Name="btnCerrarSesion" Background="#867628" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Cerrar Sesión">
-                <WrapPanel>
-                    <Image Height="auto" Source="/Imagenes/cerrar-sesion.png"/>
+                <WrapPanel x:Name="cntSalir">
+                    <Image x:Name="imgCerrar" Height="auto" Source="/Imagenes/cerrar-sesion.png"/>
                 </WrapPanel>
             </Button>
             <Button x:Name="btnAyuda" Background="#867628" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Ayuda">
-                <WrapPanel>
-                    <Image Height="auto" Source="/Imagenes/informacion.png"/>
+                <WrapPanel x:Name="cntAyuda">
+                    <Image x:Name="imgAyuda" Height="auto" Source="/Imagenes/informacion.png"/>
                 </WrapPanel>
             </Button>
         </StackPanel>
-        <Frame>
-            
-        </Frame>
     </Grid>
 </Window>

@@ -28,5 +28,17 @@ namespace Laboratorio_IPO
         {
             MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
         }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            btnCerrarMenu.Visibility = Visibility.Visible;
+            btnMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnCerrarMenu_Click(object sender, RoutedEventArgs e)
+        {
+            btnCerrarMenu.Visibility = Visibility.Collapsed;
+            btnMenu.Visibility= Visibility.Visible; 
+        }
     }
 }

@@ -155,5 +155,9 @@
     <Resource Include="Imagenes\schmidt.jpg" />
     <Resource Include="Imagenes\oso.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dominio\" />
+    <Folder Include="Persistencia\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

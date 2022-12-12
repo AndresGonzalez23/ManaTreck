@@ -26,11 +26,6 @@ namespace Laboratorio_IPO.Presentación
             InitializeComponent();
         }
 
-        private void Ventana_Principal_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
-        }
-
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
             btnCerrarMenu.Visibility = Visibility.Visible;
@@ -46,6 +41,11 @@ namespace Laboratorio_IPO.Presentación
         private void btnRutas_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = paginas[0];
+        }
+
+        private void Ventana_Principal_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            App.Current.Shutdown();
         }
     }
 }

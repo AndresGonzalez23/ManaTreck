@@ -58,6 +58,9 @@
     <Compile Include="Presentación\PaginaRutas.xaml.cs">
       <DependentUpon>PaginaRutas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\VentanaInformaciónRuta.xaml.cs">
+      <DependentUpon>VentanaInformaciónRuta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Presentación\PaginaRutas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentación\VentanaInformaciónRuta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +165,9 @@
   <ItemGroup>
     <Folder Include="Dominio\" />
     <Folder Include="Persistencia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\treriosruta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

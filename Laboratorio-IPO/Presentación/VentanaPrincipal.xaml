@@ -1,9 +1,9 @@
-﻿<Window x:Name="Ventana_Principal" x:Class="Laboratorio_IPO.VentanaPrincipal"
+﻿<Window x:Name="Ventana_Principal" x:Class="Laboratorio_IPO.Presentación.VentanaPrincipal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Laboratorio_IPO"
+        xmlns:local="clr-namespace:Laboratorio_IPO.Presentación"
         mc:Ignorable="d"
         Title="VentanaPrincipal"
         Height="500" Width="800"
@@ -87,19 +87,19 @@
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Guias" Height="60">
-                            <Button x:Name="btnGuias" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50">
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
-                                    <TextBlock Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
-                                </StackPanel>
-                            </Button>
-                        </ListViewItem>
                         <ListViewItem x:Name="Excursionistas" Height="60">
                             <Button x:Name="btnExcursionistas" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
                                     <TextBlock Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem x:Name="Guias" Height="60">
+                            <Button x:Name="btnGuias" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
+                                    <TextBlock Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>

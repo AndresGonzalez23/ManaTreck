@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratorio_IPO.Presentación;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Laboratorio_IPO
+namespace Laboratorio_IPO.Presentación
 {
     /// <summary>
     /// Lógica de interacción para VentanaPrincipal.xaml

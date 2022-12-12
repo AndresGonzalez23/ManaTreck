@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Presentación\PaginaRutas.xaml.cs">
+      <DependentUpon>PaginaRutas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -70,6 +73,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Presentación\PaginaRutas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentación\VentanaPrincipal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +144,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\excursionista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\tresrios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\calderones.jpg" />
+    <Resource Include="Imagenes\CARES.jpg" />
+    <Resource Include="Imagenes\rey.jpg" />
+    <Resource Include="Imagenes\schmidt.jpg" />
+    <Resource Include="Imagenes\oso.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,6 +20,7 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class VentanaPrincipal : Window
     {
+        public Page[] paginas = new Page[] {new PaginaRutas()};
         public VentanaPrincipal()
         {
             InitializeComponent();
@@ -40,6 +41,11 @@ namespace Laboratorio_IPO.Presentación
         {
             btnCerrarMenu.Visibility = Visibility.Collapsed;
             btnMenu.Visibility= Visibility.Visible; 
+        }
+
+        private void btnRutas_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = paginas[0];
         }
     }
 }

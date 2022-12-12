@@ -80,7 +80,7 @@
                     </Grid>
                     <ListView x:Name="ListMenu" Background="#6F5120" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" MinHeight="180" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
                         <ListViewItem x:Name="Rutas" Height="60">
-                            <Button x:Name="btnRutas" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50">
+                            <Button x:Name="btnRutas" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50" Click="btnRutas_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
                                     <TextBlock Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>

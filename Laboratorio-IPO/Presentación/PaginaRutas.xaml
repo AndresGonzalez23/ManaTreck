@@ -1,0 +1,60 @@
+﻿<Page x:Class="Laboratorio_IPO.Presentación.PaginaRutas"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laboratorio_IPO.Presentación"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1040"
+      Title="PaginaRutas">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="66*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="110*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/tresrios.jpg"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnRuta2" Grid.Column="3" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/calderones.jpg"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnRuta3" Grid.Column="5" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/CARES.jpg"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnRuta4" Grid.Column="1" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/oso.jpg"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnRuta5" Grid.Column="3" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/rey.jpg"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnRuta6" Grid.Column="5" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+            <StackPanel>
+                <Image Height="150" Width="150" Source="/Imagenes/schmidt.jpg"/>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Page>

@@ -24,6 +24,7 @@ namespace Laboratorio_IPO.Presentación
         public VentanaPrincipal()
         {
             InitializeComponent();
+            MainFrame.Content = paginas[0];
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)

@@ -25,7 +25,9 @@
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2">
+        <Frame x:Name="FrameRutas" Grid.ColumnSpan="7" Grid.RowSpan="5"/>
+
+        <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta1_Click">
             <StackPanel>
                 <Image Height="150" Width="150" Source="/Imagenes/tresrios.jpg"/>
             </StackPanel>

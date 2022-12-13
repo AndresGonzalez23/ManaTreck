@@ -20,9 +20,15 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class PaginaRutas : Page
     {
+        public Page[] paginasRutas = new Page[] { new VentanaInformaciónRuta()};
         public PaginaRutas()
         {
             InitializeComponent();
+        }
+
+        private void btnRuta1_Click(object sender, RoutedEventArgs e)
+        {
+            FrameRutas.Content = paginasRutas[0];
         }
     }
 }

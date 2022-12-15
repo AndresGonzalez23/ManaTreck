@@ -30,5 +30,7 @@ namespace Laboratorio_IPO.Presentación
         {
             FrameRutas.Content = paginasRutas[0];
         }
+
+		//Hola probando
     }
 }

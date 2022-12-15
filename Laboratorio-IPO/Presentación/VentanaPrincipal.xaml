@@ -104,6 +104,28 @@
                             </Button>
                         </ListViewItem>
                     </ListView>
+                    <Rectangle x:Name="rctSeparar" MinHeight="180"/>
+                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
+                        <ListViewItem x:Name="AcercaDe" Height="60">
+                            <Button x:Name="btnAcerca" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem x:Name="CerrarSesion" Height="60">
+                            <Button x:Name="btnSesion" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Cerrar Sesión" Height="50">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
+                                    <TextBlock Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem x:Name="Usuario" Height="60">
+                            
+                        </ListViewItem>
+                    </ListView>
                 </StackPanel>
             </Grid>
         </Grid>

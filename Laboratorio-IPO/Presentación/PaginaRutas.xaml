@@ -63,6 +63,5 @@
         <Label x:Name="lblOso" Grid.Column="1" Grid.Row="4" Content="Senda del Oso" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
         <Label x:Name="lblRey" Grid.Column="3" Grid.Row="4" Content="Camino del Rey" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
         <Label x:Name="lblSchmidt" Grid.Column="5" Grid.Row="4" Content="El camino Schmidt" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-
     </Grid>
 </Page>

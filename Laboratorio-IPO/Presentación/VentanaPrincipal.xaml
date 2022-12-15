@@ -67,63 +67,68 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </Grid.RenderTransform>
-                        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Desplegar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#6F5120" BorderThickness="0" Click="btnMenu_Click">
+                        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Desplegar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#4D2A10" BorderThickness="0" Click="btnMenu_Click">
                             <StackPanel Background="#6F5120">
-                                <Image Source="/Imagenes/menu.png"/>
+                                <Image x:Name="imgMenu" Source="/Imagenes/menu.png"/>
                             </StackPanel>
                         </Button>
                         <Button x:Name="btnCerrarMenu" Visibility="Collapsed"  HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Cerrar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#6F5120" BorderThickness="0" Margin="5" Click="btnCerrarMenu_Click">
                             <StackPanel Background="#6F5120">
-                                <Image Source="/Imagenes/volver.png"/>
+                                <Image x:Name="imgCerrarMenu" Source="/Imagenes/volver.png"/>
                             </StackPanel>
                         </Button>
                     </Grid>
-                    <ListView x:Name="ListMenu" Background="#6F5120" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" MinHeight="180" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
-                        <ListViewItem x:Name="Rutas" Height="60">
-                            <Button x:Name="btnRutas" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50" Click="btnRutas_Click">
+                    <ListView x:Name="ListMenu" Background="#6F5120" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="180" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
+                        <ListViewItem x:Name="Rutas" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
+                            <Button x:Name="btnRutas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50" Click="btnRutas_Click">
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <Image x:Name="imgRuta" Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
+                                    <TextBlock x:Name="txtRuta" Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Excursionistas" Height="60">
-                            <Button x:Name="btnExcursionistas" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50">
+                        <ListViewItem x:Name="Excursionistas" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
+                            <Button x:Name="btnExcursionistas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50">
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
-                                    <TextBlock Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <Image x:Name="imgExcursionistas" Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
+                                    <TextBlock x:Name="txtExcursionistas" Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Guias" Height="60">
-                            <Button x:Name="btnGuias" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50">
+                        <ListViewItem x:Name="Guias" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
+                            <Button x:Name="btnGuias" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50">
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
-                                    <TextBlock Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <Image x:Name="imgGuias" Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
+                                    <TextBlock x:Name="txtGuias" Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
                     </ListView>
                     <Rectangle x:Name="rctSeparar" MinHeight="180"/>
-                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
-                        <ListViewItem x:Name="AcercaDe" Height="60">
-                            <Button x:Name="btnAcerca" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50">
+                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" VerticalAlignment="Bottom">
+                        <ListViewItem x:Name="AcercaDe" Height="60" BorderBrush="#BBA647" BorderThickness="1">
+                            <Button x:Name="btnAcerca" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50" Click="btnAcerca_Click">
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <Image x:Name="imgAcercaDe" Source="/Imagenes/informacion.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Stretch" Margin="3"/>
+                                    <TextBlock x:Name="txtAcercaDe" Text="Acerca De" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="CerrarSesion" Height="60">
-                            <Button x:Name="btnSesion" BorderBrush="Black" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Cerrar Sesión" Height="50">
+                        <ListViewItem x:Name="CerrarSesion" Height="60" BorderBrush="#BBA647" BorderThickness="1">
+                            <Button x:Name="btnSesion" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Cerrar Sesión" Height="50" Click="btnSesion_Click">
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
-                                    <TextBlock Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <Image x:Name="imgSalir" Source="/Imagenes/cerrar-sesion.png" MaxWidth="40" MaxHeight="40" Width="41" Margin="4"/>
+                                    <TextBlock x:Name="txtSalir" Text="Cerrar Sesión" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Usuario" Height="60">
-                            
+                        <ListViewItem x:Name="Usuario" Height="60" BorderBrush="#BBA647" BorderThickness="1">
+                            <Button x:Name="btnUsuario" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver usuario">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image x:Name="imgUsuario" Source="/Imagenes/usuarioFoto.png" MaxHeight="40" MaxWidth="40" Margin="3"/>
+                                    <TextBlock x:Name="txtUsuario" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="5"/>
+                                </StackPanel>
+                            </Button>
                         </ListViewItem>
                     </ListView>
                 </StackPanel>

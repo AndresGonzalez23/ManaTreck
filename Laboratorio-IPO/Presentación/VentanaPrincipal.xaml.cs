@@ -20,12 +20,15 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class VentanaPrincipal : Window
     {
+        public string nombreUsuario = "Andrés";
+        DateTime lastConexion = DateTime.Now;
         public Page[] paginas;
         public VentanaPrincipal()
         {
             InitializeComponent();
             paginas = new Page[] { new PaginaRutas(this)};
             MainFrame.Content = paginas[0];
+            txtUsuario.Text = nombreUsuario + "\n" + "U.Conexión: " + lastConexion;
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
@@ -48,6 +51,19 @@ namespace Laboratorio_IPO.Presentación
         private void Ventana_Principal_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             App.Current.Shutdown();
+        }
+
+        private void btnSesion_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Cerrando Sesión", "Cierre de Sesión");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnAcerca_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Aplicación creada por Andrés González Varela y David Carrobles Illán", "Información sobre la aplicación");
         }
     }
 }

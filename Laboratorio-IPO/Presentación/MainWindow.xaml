@@ -67,7 +67,8 @@
         <Image x:Name="imgUsuario" 
                Grid.Column="2" Grid.Row="5"
                HorizontalAlignment="Center" VerticalAlignment="Center"
-               Source="/Imagenes/fotoUsuario.png"/>
+               Source="/Imagenes/fotoUsuario.png"
+               Margin="0,2,0,2"/>
         <Label x:Name="lblUsuario" 
                Grid.Column="3"  Grid.Row="5" Grid.ColumnSpan="3"
                Content="Usuario" 
@@ -81,13 +82,8 @@
                  BorderThickness="2"
                  PasswordChar="*"
                  IsEnabled="False"
-                 KeyUp="txtContrasena_KeyUp"/>
-        <Image x:Name="imgContrasena" 
-               Grid.Column="2" Grid.Row="8"
-               HorizontalAlignment="Right" VerticalAlignment="Top"
-               Source="Imagenes/candado-cerrado.png" 
-               Margin="0,6,11,0"
-               />
+                 KeyUp="txtContrasena_KeyUp"
+                 />
         <Label x:Name="lblContrasena" Grid.Column="3" Grid.Row="8"
                Content="Contraseña" FontSize="20"
                HorizontalContentAlignment="Stretch"  VerticalContentAlignment="Bottom"
@@ -105,5 +101,7 @@
                 Height="34" Width="102" 
                 
                 Click="btnLogin_Click"/>
+        <Image x:Name="imgContrasena" 
+               Grid.Column="2" Grid.Row="8" Margin="0,2,0,2" Source="/Imagenes/candado-cerrado.png"/>
     </Grid>
 </Window>

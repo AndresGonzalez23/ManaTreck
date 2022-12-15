@@ -20,10 +20,11 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class VentanaPrincipal : Window
     {
-        public Page[] paginas = new Page[] {new PaginaRutas()};
+        public Page[] paginas;
         public VentanaPrincipal()
         {
             InitializeComponent();
+            paginas = new Page[] { new PaginaRutas(this)};
             MainFrame.Content = paginas[0];
         }
 

@@ -32,5 +32,30 @@ namespace Laboratorio_IPO.Presentación
         {
             ventanaPadre.MainFrame.Content = paginasRutas[0];
         }
+
+        private void btnRuta2_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaPadre.MainFrame.Content = paginasRutas[0];
+        }
+
+        private void btnRuta3_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaPadre.MainFrame.Content = paginasRutas[0];
+        }
+
+        private void btnRuta4_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaPadre.MainFrame.Content = paginasRutas[0];
+        }
+
+        private void btnRuta5_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaPadre.MainFrame.Content = paginasRutas[0];
+        }
+
+        private void btnRuta6_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaPadre.MainFrame.Content = paginasRutas[0];
+        }
     }
 }

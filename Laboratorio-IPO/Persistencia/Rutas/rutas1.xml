@@ -1,0 +1,38 @@
+<Rutas>
+	<Ruta Nombre="Lagos Covadonga" Provincia/as="Asturias" Origen="La Riera" Destino="Covadonga" Duracion="05:00:00" 
+            Fecha="05/08/2007" Hora="16:00" NivelDificultad="2" Guia="Alexander" Numero_excursionistas="10" 
+            FormaAcceso="autobus" FormaVuelta="taxi" Material="deportivas, chandal, camara de fotos, crema solar" ComidaIncluida="true" pdi="Lagos, Pradera"/>
+  <Ruta Nombre="Las playas del paraiso" Provincia/as="Almeria" Origen="Nijar" Destino="La playa" Duracion="04:30:00" 
+            Fecha="21/01/2014" Hora="16:30" NivelDificultad="1" Guia="Maria" Numero_excursionistas="15" 
+            FormaAcceso="coche" FormaVuelta="coche" Material="botas, chandal, camara de fotos, crema solar" ComidaIncluida="true" pdi="Centro de buceo, Barcas"/>
+  <Ruta Nombre="Rio Cerezuelo" Provincia/as="Jaen" Origen="Cazorla" Destino="Cascada" Duracion="00:20:00" 
+            Fecha="23/08/2003" Hora="17:00" NivelDificultad="1" Guia="Paco" Numero_excursionistas="14" 
+            FormaAcceso="autobus" FormaVuelta="autubus" Material="deportivas, chandal, camara de fotos, crema solar" ComidaIncluida="true" pdi="Castillo, Bosque"/>
+  <Ruta Nombre="Monasterios seros" Provincia/as="huesca" Origen="Santa cruz de la seros" Destino="Monasterios" Duracion="01:00:00" 
+            Fecha="05/11/2010" Hora="10:00" NivelDificultad="2" Guia="Irene" Numero_excursionistas="9" 
+            FormaAcceso="coche" FormaVuelta="coche" Material="botas, camara de fotos, mochila" ComidaIncluida="true" pdi="Ermita, Pradera, Merendero"/>
+  <Ruta Nombre="Faro y Castillo de Almeria" Provincia/as="Almeria" Origen="Almeria" Destino="Faro y Castillo" Duracion="00:30:00" 
+            Fecha="08/09/20016" Hora="11:00" NivelDificultad="2" Guia="Ricardo" Numero_excursionistas="8" 
+            FormaAcceso="coche" FormaVuelta="coche" Material="bici, casco, camara de fotos, crema solar" ComidaIncluida="false" pdi="Cable ingles, Puerto"/>
+  <Ruta Nombre="Mirador del pozo" Provincia/as="Asturias" Origen="Las arenas" Destino="Mirador del pozo" Duracion="00:45:00" 
+            Fecha="03/12/2005" Hora="16:30" NivelDificultad="3" Guia="Alexander" Numero_excursionistas="10" 
+            FormaAcceso="autobus" FormaVuelta="autobus" Material="deportivas, chandal, camara de fotos, crema solar" ComidaIncluida="false" pdi="Poo de cabrales"/>
+  <Ruta Nombre="Calas mas bellas del Mediterraneo" Provincia/as="Menorca" Origen="Menorca" Destino="Cala llucalari" Duracion="02:00:00" 
+            Fecha="30/04/2012" Hora="16:00" NivelDificultad="2" Guia="Paco" Numero_excursionistas="17" 
+            FormaAcceso="barco" FormaVuelta="avion" Material="deportivas, chandal, camara de fotos, crema solar" ComidaIncluida="true" pdi="Playas"/>
+  <Ruta Nombre="Hayedo" Provincia/as="Guadalajara" Origen="La Galve de Sorbe" Destino="Parque natural Hayedo" Duracion="03:00:00" 
+            Fecha="25/05/2008" Hora="16:30" NivelDificultad="2" Guia="Maria" Numero_excursionistas="19" 
+            FormaAcceso="tren" FormaVuelta="metro" Material="botas, chandal, sombrero, baston" ComidaIncluida="true" pdi="Majaelrayo, Merendero"/>
+  <Ruta Nombre="Laredo" Provincia/as="Bilbao" Origen="La arenosa" Destino="Monte buciero" Duracion="03:00:00" 
+            Fecha="02/03/2013" Hora="16:00" NivelDificultad="4" Guia="Ricardo" Numero_excursionistas="5" 
+            FormaAcceso="autobus" FormaVuelta="autobos" Material="deportivas, bañador, kayak, remos, camara de fotos, crema solar" ComidaIncluida="false" pdi="Mirador, Fuerte, Faro del caballo"/>
+  <Ruta Nombre="Sigma de las Tainas" Provincia/as="Soria, Burgos" Origen="Santa Maria de las hoyas" Destino="Casajeros" Duracion="03:30:00" 
+            Fecha="09/06/2000" Hora="09:00" NivelDificultad="5" Guia="Irene" Numero_excursionistas="12" 
+            FormaAcceso="coche" FormaVuelta="coche" Material="deportivas, chandal, paracort, arnes" ComidaIncluida="false" pdi="Parque natural, Cañon de rio de lobos, Puente de los siete ojos"/>
+  <Ruta Nombre="Siurana" Provincia/as="Tarragona" Origen="La Febro" Destino="Mirador de Siurana" Duracion="04:00:00" 
+            Fecha="15/02/2002" Hora="09:00" NivelDificultad="4" Guia="Alexander" Numero_excursionistas="14" 
+            FormaAcceso="autobus" FormaVuelta="autobus" Material="deportivas, chandal, arnes, crema solar" ComidaIncluida="true" pdi="La Gorguina, Font de cap pla"/>
+  <Ruta Nombre="Hoces del Cabriel" Provincia/as="Albacete, Valencia" Origen="Minglanilla" Destino="CH Contreras" Duracion="02:30:00" 
+            Fecha="22/07/1999" Hora="17:00" NivelDificultad="3" Guia="Paco" Numero_excursionistas="18" 
+            FormaAcceso="autobus" FormaVuelta="taxi" Material="deportivas, chandal, camara de fotos, crema solar, gorra" ComidaIncluida="true" pdi="Biosfera valle, Rio cabriel, Mirador embalse"/>
+</Rutas>

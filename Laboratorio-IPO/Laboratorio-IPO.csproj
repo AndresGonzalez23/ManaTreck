@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dominio\Ruta.cs" />
     <Compile Include="Presentación\PaginaRutas.xaml.cs">
       <DependentUpon>PaginaRutas.xaml</DependentUpon>
     </Compile>
@@ -162,12 +163,30 @@
     <Resource Include="Imagenes\schmidt.jpg" />
     <Resource Include="Imagenes\oso.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dominio\" />
-    <Folder Include="Persistencia\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Imagenes\treriosruta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Guias\Alexander.jpeg" />
+    <Resource Include="Persistencia\Guias\guias.xml" />
+    <Resource Include="Persistencia\Guias\Irene.jpg" />
+    <Resource Include="Persistencia\Guias\Marta.jpeg" />
+    <Resource Include="Persistencia\Guias\Paco.jpg" />
+    <Resource Include="Persistencia\Guias\Ricardo.jpg" />
+    <Resource Include="Persistencia\Rutas\Calas mas bellas del Mediterraneo.jpg" />
+    <Resource Include="Persistencia\Rutas\Faro y Castillo de Almeria.jpeg" />
+    <Resource Include="Persistencia\Rutas\Hayedo.jpg" />
+    <Resource Include="Persistencia\Rutas\Hoces del Cabriel.jpg" />
+    <Resource Include="Persistencia\Rutas\Lagos Covadonga.jpg" />
+    <Resource Include="Persistencia\Rutas\Laredo.jpeg" />
+    <Resource Include="Persistencia\Rutas\Las playas del paraiso.jpg" />
+    <Resource Include="Persistencia\Rutas\Mirador del pozo.jpg" />
+    <Resource Include="Persistencia\Rutas\Monasterios seros.jpg" />
+    <Resource Include="Persistencia\Rutas\Rio Cerezuelo.jpg" />
+    <Resource Include="Persistencia\Rutas\rutas1.xml" />
+    <Resource Include="Persistencia\Rutas\Sigma de las Tainas.jpg" />
+    <Resource Include="Persistencia\Rutas\Siurana.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

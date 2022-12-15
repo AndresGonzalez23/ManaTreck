@@ -41,7 +41,7 @@
         <Label x:Name="lblOrigen" Grid.Column="1" Grid.Row="3" Content="Origen" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
         <TextBox x:Name="txtOrigen" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblExcursionistas" Grid.Column="1" Grid.Row="5" Content="Excursionistas" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-        <ListView x:Name="lstExcursionistas" Grid.Column="1" Grid.Row="5" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="7" Margin="0,25,0,10">
+        <ListView x:Name="lstExcursionistas" Grid.Column="1" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="6" Margin="2,5,3,15">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -54,7 +54,7 @@
         <TextBox x:Name="txtFecha" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblDestino" Grid.Column="3" Grid.Row="3" Content="Destino" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
         <TextBox x:Name="txtDestino" Grid.Column="3" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
-
+        
         <Label x:Name="lblHora" Grid.Column="5" Grid.Row="1" Content="Hora" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
         <TextBox x:Name="txtHora" Grid.Column="5" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblTiempo" Grid.Column="5" Grid.Row="3" Content="Tiempo de duración" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
@@ -65,6 +65,6 @@
         <TextBox x:Name="txtComida" Grid.Column="5" Grid.Row="8" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblMaterial" Grid.Column="5" Grid.Row="9" Content="Material necesario" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
         <TextBox x:Name="txtMaterial" Grid.Column="5" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
-       
+
     </Grid>
 </Page>

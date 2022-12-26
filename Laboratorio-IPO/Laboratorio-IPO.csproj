@@ -184,7 +184,7 @@
     <Resource Include="Persistencia\Rutas\Mirador del pozo.jpg" />
     <Resource Include="Persistencia\Rutas\Monasterios seros.jpg" />
     <Resource Include="Persistencia\Rutas\Rio Cerezuelo.jpg" />
-    <Resource Include="Persistencia\Rutas\rutas1.xml" />
+    <Resource Include="Persistencia\Rutas\rutas.xml" />
     <Resource Include="Persistencia\Rutas\Sigma de las Tainas.jpg" />
     <Resource Include="Persistencia\Rutas\Siurana.jpg" />
   </ItemGroup>

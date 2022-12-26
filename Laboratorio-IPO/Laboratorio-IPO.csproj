@@ -163,7 +163,60 @@
     <Resource Include="Imagenes\schmidt.jpg" />
     <Resource Include="Imagenes\oso.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Persistencia\Excursionistas\Agustin.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Alberto.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Alvaro.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Ana.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Antonio.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Beatriz.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Daniel.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Diego.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\excursionistas.xml" />
+    <Resource Include="Persistencia\Excursionistas\Federico.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Lucia.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Luis.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Manuel.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Marta.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Mercedes.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Miguel.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Natalia.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Patricia.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Ramon.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Raquel.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Raul.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Roberto.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Sara.jpeg" />
+    <Resource Include="Persistencia\Excursionistas\Tomas.jpg" />
+    <Resource Include="Persistencia\Excursionistas\Vicente.jpg" />
+    <Resource Include="Persistencia\PDI\Calas mas bellas del Mediterraneo1.jpeg" />
+    <Resource Include="Persistencia\PDI\Faro y Castillo de Almeria1.jpg" />
+    <Resource Include="Persistencia\PDI\Faro y Castillo de Almeria2.jpg" />
+    <Resource Include="Persistencia\PDI\Hayedo1.jpg" />
+    <Resource Include="Persistencia\PDI\Hayedo2.jpg" />
+    <Resource Include="Persistencia\PDI\Hoces del Cabriel1.jpg" />
+    <Resource Include="Persistencia\PDI\Hoces del Cabriel2.jpg" />
+    <Resource Include="Persistencia\PDI\Hoces del Cabriel3.jpg" />
+    <Resource Include="Persistencia\PDI\Lagos Covadonga1.jpg" />
+    <Resource Include="Persistencia\PDI\Lagos Covadonga2.jpg" />
+    <Resource Include="Persistencia\PDI\Laredo1.jpg" />
+    <Resource Include="Persistencia\PDI\Laredo2.jpg" />
+    <Resource Include="Persistencia\PDI\Laredo3.jpg" />
+    <Resource Include="Persistencia\PDI\Las playas del paraiso1.jpg" />
+    <Resource Include="Persistencia\PDI\Las playas del paraiso2.jpg" />
+    <Resource Include="Persistencia\PDI\Mirador del pozo1.jpg" />
+    <Resource Include="Persistencia\PDI\Monasterios seros1.jpeg" />
+    <Resource Include="Persistencia\PDI\Monasterios seros2.jpg" />
+    <Resource Include="Persistencia\PDI\Monasterios seros3.jpg" />
+    <Resource Include="Persistencia\PDI\PDI.xml" />
+    <Resource Include="Persistencia\PDI\Rio Cerezuelo1.jpg" />
+    <Resource Include="Persistencia\PDI\Rio Cerezuelo2.jpg" />
+    <Resource Include="Persistencia\PDI\Sigma de las Tainas1.jpg" />
+    <Resource Include="Persistencia\PDI\Sigma de las Tainas2.jpg" />
+    <Resource Include="Persistencia\PDI\Sigma de las Tainas3.jpg" />
+    <Resource Include="Persistencia\PDI\Siurana1.jpg" />
+    <Resource Include="Persistencia\PDI\Siurana2.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\treriosruta.png" />
   </ItemGroup>
@@ -187,6 +240,20 @@
     <Resource Include="Persistencia\Rutas\rutas.xml" />
     <Resource Include="Persistencia\Rutas\Sigma de las Tainas.jpg" />
     <Resource Include="Persistencia\Rutas\Siurana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Persistencia\Rutas\Calas mas bellas del Mediterraneo_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Faro y Castillo de Almeria_Mapa.jpg" />
+    <Resource Include="Persistencia\Rutas\Hayedo_Mapa.jpg" />
+    <Resource Include="Persistencia\Rutas\Hoces del Cabriel_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Lagos Covadonga_Mapa.jpg" />
+    <Resource Include="Persistencia\Rutas\Laredo_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Las playas del paraiso_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Mirador del pozo_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Monasterios seros_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Rio Cerezuelo_Mapa.png" />
+    <Resource Include="Persistencia\Rutas\Sigma de las Tainas_Mapa.PNG" />
+    <Resource Include="Persistencia\Rutas\Siurana_Mapa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

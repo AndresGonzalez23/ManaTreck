@@ -11,7 +11,7 @@
     <Grid>
         <TabControl MinHeight="450" MinWidth="800" Grid.ColumnSpan="8" Grid.RowSpan="13" Background="Transparent">
             <TabItem Header="Proximas">
-                <Grid Background="Transparent">
+                <Grid x:Name="grdProximas" Background="Transparent">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="18*"/>
                         <ColumnDefinition Width="155*"/>
@@ -38,7 +38,7 @@
                         <RowDefinition Height="25*"/>
                     </Grid.RowDefinitions>
 
-                    <Image x:Name="imgRuta" Grid.Column="6" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="230" Margin="0,1,0,5" Grid.Row="1"/>
+                    <Image x:Name="imgRuta" Grid.Column="6" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5" Grid.Row="1"/>
                     
                     <Label x:Name="lblProvincia" Grid.Column="1" Grid.Row="1" Content="Provincia" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtProvincia" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
@@ -53,8 +53,8 @@
                         </ListView.View>
                     </ListView>
 
-                    <Label x:Name="lblFecha" Grid.Column="3" Grid.Row="1" Content="Fecha" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-                    <TextBox x:Name="txtFecha" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
+                    <Label x:Name="lblHora" Grid.Column="3" Grid.Row="1" Content="Hora" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <TextBox x:Name="txtHora" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblDestino" Grid.Column="3" Grid.Row="3" Content="Destino" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtDestino" Grid.Column="3" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblNivelDificultad" Grid.Column="3" Grid.Row="5" Content="Nivel de dificultad" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
@@ -63,16 +63,16 @@
                     <TextBox x:Name="txtComida" Grid.Column="3" Grid.Row="8" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblMaterial" Grid.Column="3" Grid.Row="9" Content="Material necesario" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtMaterial" Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
-                    
-                    <Label x:Name="lblHora" Grid.Column="5" Grid.Row="1" Content="Hora" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-                    <TextBox x:Name="txtHora" Grid.Column="5" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
+
+                    <Label x:Name="lblFecha" Grid.Column="5" Grid.Row="1" Content="Fecha" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <DatePicker x:Name="txtFecha" Grid.Column="5" Grid.Row="2" MinHeight="20" MinWidth="120" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <Label x:Name="lblTiempo" Grid.Column="5" Grid.Row="3" Content="Tiempo de duración" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtTiempo" Grid.Column="5" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                 </Grid>
 
             </TabItem>
             <TabItem Header="Realizadas">
-                <Grid Background="Transparent">
+                <Grid x:Name="grdRealizadas" Background="Transparent">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="18*"/>
                         <ColumnDefinition Width="155*"/>
@@ -99,7 +99,7 @@
                         <RowDefinition Height="25*"/>
                     </Grid.RowDefinitions>
                     
-                    <Image x:Name="imgRutaR" Grid.Column="6" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="230" Margin="0,1,0,5" Grid.Row="1"/>
+                    
                     <Label x:Name="lblProvinciaR" Grid.Column="1" Grid.Row="1" Content="Provincia" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtProvinciaR" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblOrigenR" Grid.Column="1" Grid.Row="3" Content="Origen" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
@@ -113,8 +113,8 @@
                         </ListView.View>
                     </ListView>
 
-                    <Label x:Name="lblFechaR" Grid.Column="3" Grid.Row="1" Content="Fecha" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-                    <TextBox x:Name="txtFechaR" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
+                    <Label x:Name="lblHoraR" Grid.Column="3" Grid.Row="1" Content="Hora" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <TextBox x:Name="txtHoraR" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblDestinoR" Grid.Column="3" Grid.Row="3" Content="Destino" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtDestinoR" Grid.Column="3" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblNivelDificultadR" Grid.Column="3" Grid.Row="5" Content="Nivel de dificultad" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
@@ -123,11 +123,16 @@
                     <TextBox x:Name="txtComidaR" Grid.Column="3" Grid.Row="8" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblMaterialR" Grid.Column="3" Grid.Row="9" Content="Material necesario" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtMaterialR" Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
-                    
-                    <Label x:Name="lblHoraR" Grid.Column="5" Grid.Row="1" Content="Hora" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-                    <TextBox x:Name="txtHoraR" Grid.Column="5" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
+
+                    <Label x:Name="lblFechaR" Grid.Column="5" Grid.Row="1" Content="Fecha" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <DatePicker x:Name="txtFechaR" Grid.Column="5" Grid.Row="2" MinHeight="17" MinWidth="120" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <Label x:Name="lblTiempoR" Grid.Column="5" Grid.Row="3" Content="Tiempo de duración" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtTiempoR" Grid.Column="5" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
+
+                    <Image x:Name="imgRutaR" Grid.Column="6" Grid.Row="1" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5"/>
+                    <Label x:Name="lblIncidencias" Grid.Column="6" Grid.Row="10" Content="Incidencias" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <TextBox x:Name="txtIncidencias" Grid.Column="6" Grid.Row="11" MinHeight="40" MinWidth="190" MaxWidth="300" MaxHeight="200" Margin="5,5,5,5" AcceptsReturn="True" TextWrapping="Wrap"/>
+
                 </Grid>
             </TabItem>
         </TabControl>

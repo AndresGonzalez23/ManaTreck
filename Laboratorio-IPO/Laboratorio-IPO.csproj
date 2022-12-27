@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dominio\Excursionista.cs" />
+    <Compile Include="Dominio\Guia.cs" />
+    <Compile Include="Dominio\PDI.cs" />
     <Compile Include="Dominio\Ruta.cs" />
     <Compile Include="Presentación\PaginaRutas.xaml.cs">
       <DependentUpon>PaginaRutas.xaml</DependentUpon>

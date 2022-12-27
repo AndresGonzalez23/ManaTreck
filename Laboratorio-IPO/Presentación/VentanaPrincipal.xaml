@@ -105,7 +105,7 @@
                         </ListViewItem>
                     </ListView>
                     <Rectangle x:Name="rctSeparar" MinHeight="180"/>
-                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" VerticalAlignment="Bottom">
+                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
                         <ListViewItem x:Name="AcercaDe" Height="60" BorderBrush="#BBA647" BorderThickness="1">
                             <Button x:Name="btnAcerca" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50" Click="btnAcerca_Click">
                                 <StackPanel Orientation="Horizontal">

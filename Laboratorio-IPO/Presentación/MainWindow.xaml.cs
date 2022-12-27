@@ -90,7 +90,6 @@ namespace Laboratorio_IPO.Presentación
                 ComprobarEntrada(txtContrasena.Password, password,
                 txtContrasena)) /*imgCheckContrasena*/
             {
-                //Application.Current.Shutdown();
                 VentanaPrincipal ventana = new VentanaPrincipal();
                 ventana.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;
@@ -99,7 +98,10 @@ namespace Laboratorio_IPO.Presentación
 
         private void VentanaLogin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            //Quitar y cambiar
+
             MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
+            App.Current.Shutdown();
         }
     }
 }

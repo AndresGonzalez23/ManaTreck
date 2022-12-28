@@ -26,7 +26,7 @@ namespace Laboratorio_IPO.Presentación
         public VentanaPrincipal()
         {
             InitializeComponent();
-            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas()};
+            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas(), new VentanaInfoGuias()};
             MainFrame.Content = paginas[0];
             txtUsuario.Text = nombreUsuario + "\n" + "U.Conexión: " + lastConexion;
         }
@@ -69,6 +69,11 @@ namespace Laboratorio_IPO.Presentación
         private void btnExcursionistas_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = paginas[1];
+        }
+
+        private void btnGuias_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content= paginas[2];  
         }
     }
 }

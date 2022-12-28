@@ -65,7 +65,7 @@
                     <TextBox x:Name="txtMaterial" Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
 
                     <Label x:Name="lblFecha" Grid.Column="5" Grid.Row="1" Content="Fecha" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
-                    <DatePicker x:Name="txtFecha" Grid.Column="5" Grid.Row="2" MinHeight="20" MinWidth="120" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <DatePicker x:Name="txtFecha" Grid.Column="5" Grid.Row="2" MinHeight="20" MinWidth="120" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                     <Label x:Name="lblTiempo" Grid.Column="5" Grid.Row="3" Content="Tiempo de duración" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtTiempo" Grid.Column="5" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                 </Grid>

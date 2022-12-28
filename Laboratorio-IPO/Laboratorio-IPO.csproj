@@ -65,6 +65,9 @@
     <Compile Include="Presentación\VentanaInfoExcursionistas.xaml.cs">
       <DependentUpon>VentanaInfoExcursionistas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentación\VentanaInfoGuias.xaml.cs">
+      <DependentUpon>VentanaInfoGuias.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentación\VentanaInformaciónRuta.xaml.cs">
       <DependentUpon>VentanaInformaciónRuta.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentación\VentanaInfoExcursionistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentación\VentanaInfoGuias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -96,7 +96,7 @@
                             </Button>
                         </ListViewItem>
                         <ListViewItem x:Name="Guias" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
-                            <Button x:Name="btnGuias" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50">
+                            <Button x:Name="btnGuias" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50" Click="btnGuias_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgGuias" Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
                                     <TextBlock x:Name="txtGuias" Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>

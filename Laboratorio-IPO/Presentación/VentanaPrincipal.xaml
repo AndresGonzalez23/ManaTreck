@@ -88,7 +88,7 @@
                             </Button>
                         </ListViewItem>
                         <ListViewItem x:Name="Excursionistas" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
-                            <Button x:Name="btnExcursionistas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50">
+                            <Button x:Name="btnExcursionistas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50" Click="btnExcursionistas_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgExcursionistas" Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
                                     <TextBlock x:Name="txtExcursionistas" Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>

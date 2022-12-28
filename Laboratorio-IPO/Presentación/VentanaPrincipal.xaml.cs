@@ -26,7 +26,7 @@ namespace Laboratorio_IPO.Presentación
         public VentanaPrincipal()
         {
             InitializeComponent();
-            paginas = new Page[] { new PaginaRutas(this)};
+            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas()};
             MainFrame.Content = paginas[0];
             txtUsuario.Text = nombreUsuario + "\n" + "U.Conexión: " + lastConexion;
         }
@@ -64,6 +64,11 @@ namespace Laboratorio_IPO.Presentación
         private void btnAcerca_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Aplicación creada por Andrés González Varela y David Carrobles Illán", "Información sobre la aplicación");
+        }
+
+        private void btnExcursionistas_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = paginas[1];
         }
     }
 }

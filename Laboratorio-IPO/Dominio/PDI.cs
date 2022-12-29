@@ -8,7 +8,7 @@ namespace Laboratorio_IPO.Dominio
 {
 	internal class PDI
 	{
-		public static PDI[] todosPDIs;
+		public static List<PDI> todosPDIs=new List<PDI>();
 		private string _nombre;
 		private string _foto;
 		private string _descripcion;
@@ -18,6 +18,19 @@ namespace Laboratorio_IPO.Dominio
 			Foto = foto;
 			Descripcion= descripcion;
 			Tipologia= tipologia;
+		}
+		public PDI(string nombre, string foto)
+		{
+			Nombre = nombre;
+			Foto = foto;
+			Descripcion = "";
+			Tipologia = "";
+		}
+		public void actualizar(string foto, string descripcion, string tipologia)
+		{
+			Foto = foto;
+			Descripcion = descripcion;
+			Tipologia = tipologia;
 		}
 
 		public string Nombre { get => _nombre; set => _nombre = value; }

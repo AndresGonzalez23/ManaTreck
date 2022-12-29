@@ -9,7 +9,7 @@ namespace Laboratorio_IPO.Dominio
 {
 	internal class Ruta
 	{
-		public static Ruta[] todosRutas;
+		public static List<Ruta> todosRutas=new List<Ruta>();
 		private string _nombre;
 		private string _provincia;
 		private string _origen;
@@ -71,10 +71,14 @@ namespace Laboratorio_IPO.Dominio
 			Destino = destino;
 			string[] partes =duracion.Split(':');
 			Duracion = new TimeSpan(Int32.Parse(partes[0]), Int32.Parse(partes[1]), Int32.Parse(partes[2]));
-			partes = fechaYHora.Split('/');
+			partes = new string[5];
+			partes[0] = fechaYHora.Split('/')[0];
+			partes[1] = fechaYHora.Split('/')[1];
+			partes[2] = fechaYHora.Split('/')[2];
+			partes[3] = fechaYHora.Split('/')[3];
 			partes[4] =partes[3].Split(':')[1];
 			partes[3] = partes[3].Split(':')[0];
-			FechaYHora = new DateTime(Int32.Parse(partes[2]), Int32.Parse(partes[1]), Int32.Parse(partes[0]), Int32.Parse(partes[3]), Int32.Parse(partes[4]), 0);
+			FechaYHora = new DateTime(Convert.ToInt32(partes[2]), Convert.ToInt32(partes[1]), Convert.ToInt32(partes[0]), Int32.Parse(partes[3]), Int32.Parse(partes[4]), 00);
 			Dificultad = dificultad;
 			Guia = guia;
 			NumExcursionistas = numExcursionistas;

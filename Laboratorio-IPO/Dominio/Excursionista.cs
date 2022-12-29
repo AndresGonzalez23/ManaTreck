@@ -11,7 +11,7 @@ namespace Laboratorio_IPO.Dominio
 {
 	internal class Excursionista
 	{
-		public static Excursionista[] todosExcursionistas;
+		public static List<Excursionista> todosExcursionistas=new List<Excursionista>();
 		private string _nombre;
 		private string _apellidos;
 		private string _foto;

@@ -10,7 +10,7 @@ namespace Laboratorio_IPO.Dominio
 {
 	internal class Guia
 	{
-		public static Guia[] todosGuias;
+		public static List<Guia> todosGuias=new List<Guia>();
 		private string _nombre;
 		private string _apellidos;
 		private string _foto;

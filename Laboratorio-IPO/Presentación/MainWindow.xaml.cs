@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using Laboratorio_IPO.Dominio;
 
 namespace Laboratorio_IPO.Presentación
 {
@@ -93,6 +95,7 @@ namespace Laboratorio_IPO.Presentación
                 VentanaPrincipal ventana = new VentanaPrincipal();
                 ventana.Visibility = Visibility.Visible;
                 this.Visibility = Visibility.Hidden;
+                CargarContenidoXML();
             }
         }
 
@@ -103,5 +106,71 @@ namespace Laboratorio_IPO.Presentación
             MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
             App.Current.Shutdown();
         }
-    }
+		private void CargarContenidoXML()
+		{
+			// Cargar contenido de prueba
+			XmlDocument doc = new XmlDocument();
+			var fichero = Application.GetResourceStream(new Uri("Persistencia/Guias/guias.xml", UriKind.Relative));
+            doc.Load(fichero.Stream);
+			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+			{
+				Guia nuevoGuia = new Guia(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, node.Attributes["Foto"].Value, node.Attributes["Idiomas"].Value, node.Attributes["RestriccionesDisponibilidad"].Value, long.Parse(node.Attributes["Telefono"].Value), node.Attributes["Correo"].Value, Convert.ToInt32(node.Attributes["ExcursionesRealizadas"].Value), Convert.ToInt32(node.Attributes["ExcursionesPorRealizar"].Value), double.Parse(node.Attributes["PuntuacionMedia"].Value));
+                Guia.todosGuias.Add(nuevoGuia);
+			}
+			doc = new XmlDocument();
+			fichero = Application.GetResourceStream(new Uri("Persistencia/Rutas/rutas.xml", UriKind.Relative));
+			doc.Load(fichero.Stream);
+			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+			{
+                Guia guiaDeRuta=null;
+                PDI[] puntInter = null;
+                foreach(Guia g in Guia.todosGuias){
+                    if(g.Nombre.Equals(node.Attributes["Guia"].Value)){
+                        guiaDeRuta = g;
+                    }
+                }
+                String[] p = node.Attributes["pdi"].Value.Split(',');
+                puntInter=new PDI[p.Length];
+                for(int i = 0; i==p.Length ; i++){
+                    puntInter[i]=new PDI(p[i].Trim(), node.Attributes["Nombre"].Value);
+					PDI.todosPDIs.Add(puntInter[i]);
+				}
+				Ruta nuevaRuta = new Ruta(node.Attributes["Nombre"].Value, node.Attributes["Provincia"].Value, node.Attributes["Origen"].Value, node.Attributes["Destino"].Value, node.Attributes["Duracion"].Value, node.Attributes["Fecha"].Value + "/" + node.Attributes["Hora"].Value, Convert.ToInt32(node.Attributes["NivelDificultad"].Value),guiaDeRuta, Convert.ToInt32(node.Attributes["Numero_excursionistas"].Value), node.Attributes["FormaAcceso"].Value, node.Attributes["FormaVuelta"].Value, node.Attributes["Material"].Value, Convert.ToBoolean(node.Attributes["ComidaIncluida"].Value), puntInter, node.Attributes["Nombre"].Value, node.Attributes["Nombre"].Value+"_Mapa");
+				Ruta.todosRutas.Add(nuevaRuta);//COMPROBAR RUTAS DE LAS FOTOS Y SU EXTENSION
+			}
+			doc = new XmlDocument();
+			fichero = Application.GetResourceStream(new Uri("Persistencia/PDI/PDI.xml", UriKind.Relative));
+			doc.Load(fichero.Stream);
+			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+			{
+				foreach (PDI p in PDI.todosPDIs)
+				{
+					if (p.Nombre.Equals(node.Attributes["Nombre"].Value)&&p.Foto.Equals(node.Attributes["Ruta"].Value))
+					{
+						p.actualizar(node.Attributes["Foto"].Value, node.Attributes["Descripcion"].Value, node.Attributes["Tipologia"].Value);
+					}
+				}
+			}
+			doc = new XmlDocument();
+			fichero = Application.GetResourceStream(new Uri("Persistencia/Excursionistas/excursionistas.xml", UriKind.Relative));
+			doc.Load(fichero.Stream);
+			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+			{
+				String[] r = node.Attributes["ListadoRutas"].Value.Split(',');
+				Ruta[] excursiones = new Ruta[r.Length];
+				for (int i = 0; i == r.Length; i++)
+				{
+					foreach (Ruta x in Ruta.todosRutas)
+					{
+						if (x.Nombre.Equals(r[i].Trim()))
+						{
+							excursiones[i]=x;
+						}
+					}
+				}
+				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, node.Attributes["Foto"].Value, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones);
+				Excursionista.todosExcursionistas.Add(nuevoExcur);
+			}
+		}
+	}
 }

@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Laboratorio_IPO.Dominio;
+using System.IO;
+using System.Reflection;
 
 namespace Laboratorio_IPO.Presentación
 {
@@ -108,21 +110,59 @@ namespace Laboratorio_IPO.Presentación
         }
 		private void CargarContenidoXML()
 		{
-			// Cargar contenido de prueba
+            // Cargar contenido de prueba
+            string foto;
 			XmlDocument doc = new XmlDocument();
 			var fichero = Application.GetResourceStream(new Uri("Persistencia/Guias/guias.xml", UriKind.Relative));
             doc.Load(fichero.Stream);
 			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
 			{
-				Guia nuevoGuia = new Guia(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, node.Attributes["Foto"].Value, node.Attributes["Idiomas"].Value, node.Attributes["RestriccionesDisponibilidad"].Value, long.Parse(node.Attributes["Telefono"].Value), node.Attributes["Correo"].Value, Convert.ToInt32(node.Attributes["ExcursionesRealizadas"].Value), Convert.ToInt32(node.Attributes["ExcursionesPorRealizar"].Value), double.Parse(node.Attributes["PuntuacionMedia"].Value));
+				
+                if (File.Exists(@"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpg"))
+                {
+                    foto = "/Persistencia/Guias/" + node.Attributes["Nombre"].Value + ".jpg";
+				}
+                else if (File.Exists(@"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpeg"))
+                {
+                    foto = "/Persistencia/Guias/" + node.Attributes["Nombre"].Value + ".jpeg";
+				}
+                else {
+                    foto = "";
+				}
+				Guia nuevoGuia = new Guia(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, foto, node.Attributes["Idiomas"].Value, node.Attributes["RestriccionesDisponibilidad"].Value, long.Parse(node.Attributes["Telefono"].Value), node.Attributes["Correo"].Value, Convert.ToInt32(node.Attributes["ExcursionesRealizadas"].Value), Convert.ToInt32(node.Attributes["ExcursionesPorRealizar"].Value), double.Parse(node.Attributes["PuntuacionMedia"].Value));
                 Guia.todosGuias.Add(nuevoGuia);
 			}
+            string mapa;
 			doc = new XmlDocument();
 			fichero = Application.GetResourceStream(new Uri("Persistencia/Rutas/rutas.xml", UriKind.Relative));
 			doc.Load(fichero.Stream);
 			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
 			{
-                Guia guiaDeRuta=null;
+				if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpg"))
+				{
+					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".jpg";
+				}
+				else if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpeg"))
+				{
+					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".jpeg";
+				}
+				else
+				{
+					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".png";
+				}
+				if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpg"))
+				{
+					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.jpg";
+				}
+				else if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpeg"))
+				{
+					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.jpeg";
+				}
+				else
+				{
+					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.png";
+				}
+				Guia guiaDeRuta=null;
                 PDI[] puntInter = null;
                 foreach(Guia g in Guia.todosGuias){
                     if(g.Nombre.Equals(node.Attributes["Guia"].Value)){
@@ -135,7 +175,7 @@ namespace Laboratorio_IPO.Presentación
                     puntInter[i]=new PDI(p[i].Trim(), node.Attributes["Nombre"].Value);
 					PDI.todosPDIs.Add(puntInter[i]);
 				}
-				Ruta nuevaRuta = new Ruta(node.Attributes["Nombre"].Value, node.Attributes["Provincia"].Value, node.Attributes["Origen"].Value, node.Attributes["Destino"].Value, node.Attributes["Duracion"].Value, node.Attributes["Fecha"].Value + "/" + node.Attributes["Hora"].Value, Convert.ToInt32(node.Attributes["NivelDificultad"].Value),guiaDeRuta, Convert.ToInt32(node.Attributes["Numero_excursionistas"].Value), node.Attributes["FormaAcceso"].Value, node.Attributes["FormaVuelta"].Value, node.Attributes["Material"].Value, Convert.ToBoolean(node.Attributes["ComidaIncluida"].Value), puntInter, node.Attributes["Nombre"].Value, node.Attributes["Nombre"].Value+"_Mapa");
+				Ruta nuevaRuta = new Ruta(node.Attributes["Nombre"].Value, node.Attributes["Provincia"].Value, node.Attributes["Origen"].Value, node.Attributes["Destino"].Value, node.Attributes["Duracion"].Value, node.Attributes["Fecha"].Value + "/" + node.Attributes["Hora"].Value, Convert.ToInt32(node.Attributes["NivelDificultad"].Value),guiaDeRuta, Convert.ToInt32(node.Attributes["Numero_excursionistas"].Value), node.Attributes["FormaAcceso"].Value, node.Attributes["FormaVuelta"].Value, node.Attributes["Material"].Value, Convert.ToBoolean(node.Attributes["ComidaIncluida"].Value), puntInter, foto, mapa);
 				Ruta.todosRutas.Add(nuevaRuta);//COMPROBAR RUTAS DE LAS FOTOS Y SU EXTENSION
 			}
 			doc = new XmlDocument();
@@ -143,11 +183,23 @@ namespace Laboratorio_IPO.Presentación
 			doc.Load(fichero.Stream);
 			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
 			{
+				if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpg"))
+				{
+					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".jpg";
+				}
+				else if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpeg"))
+				{
+					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".jpeg";
+				}
+				else
+				{
+					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".png";
+				}
 				foreach (PDI p in PDI.todosPDIs)
 				{
 					if (p.Nombre.Equals(node.Attributes["Nombre"].Value)&&p.Foto.Equals(node.Attributes["Ruta"].Value))
 					{
-						p.actualizar(node.Attributes["Foto"].Value, node.Attributes["Descripcion"].Value, node.Attributes["Tipologia"].Value);
+						p.actualizar(foto, node.Attributes["Descripcion"].Value, node.Attributes["Tipologia"].Value);
 					}
 				}
 			}
@@ -156,6 +208,18 @@ namespace Laboratorio_IPO.Presentación
 			doc.Load(fichero.Stream);
 			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
 			{
+				if (File.Exists(@"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpg"))
+				{
+					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".jpg";
+				}
+				else if (File.Exists(@"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpeg"))
+				{
+					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".jpeg";
+				}
+				else
+				{
+					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".png";
+				}
 				String[] r = node.Attributes["ListadoRutas"].Value.Split(',');
 				Ruta[] excursiones = new Ruta[r.Length];
 				for (int i = 0; i == r.Length; i++)
@@ -168,7 +232,7 @@ namespace Laboratorio_IPO.Presentación
 						}
 					}
 				}
-				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, node.Attributes["Foto"].Value, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones);
+				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, foto, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones);
 				Excursionista.todosExcursionistas.Add(nuevoExcur);
 			}
 		}

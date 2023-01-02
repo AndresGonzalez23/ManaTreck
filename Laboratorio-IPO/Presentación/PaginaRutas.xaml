@@ -29,39 +29,39 @@
 
         <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta1_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/tresrios.jpg"/>
+                <Image x:Name="img1" Height="150" Width="150" Source="/Imagenes/tresrios.jpg"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnRuta2" Grid.Column="3" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta2_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/calderones.jpg"/>
+				<Image x:Name="img2" Height="150" Width="150" Source="/Imagenes/calderones.jpg"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnRuta3" Grid.Column="5" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta3_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/CARES.jpg"/>
+				<Image x:Name="img3" Height="150" Width="150" Source="/Imagenes/CARES.jpg"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnRuta4" Grid.Column="1" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta4_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/oso.jpg"/>
+				<Image x:Name="img4" Height="150" Width="150" Source="/Imagenes/oso.jpg"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnRuta5" Grid.Column="3" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta5_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/rey.jpg"/>
+				<Image x:Name="img5" Height="150" Width="150" Source="/Imagenes/rey.jpg"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnRuta6" Grid.Column="5" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta6_Click">
             <StackPanel>
-                <Image Height="150" Width="150" Source="/Imagenes/schmidt.jpg"/>
+				<Image x:Name="img6" Height="150" Width="150" Source="/Imagenes/schmidt.jpg"/>
             </StackPanel>
         </Button>
-        <Label x:Name="lblRios" Grid.Column="1" Grid.Row="2" Content="Ruta de los Tres Ríos" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-        <Label x:Name="lblCalderones" Grid.Column="3" Grid.Row="2" Content="Ruta de los Calderones" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-        <Label x:Name="lblCares" Grid.Column="5"  Grid.Row="2" Content="Ruta del Cares" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-        <Label x:Name="lblOso" Grid.Column="1" Grid.Row="4" Content="Senda del Oso" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-        <Label x:Name="lblRey" Grid.Column="3" Grid.Row="4" Content="Camino del Rey" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
-        <Label x:Name="lblSchmidt" Grid.Column="5" Grid.Row="4" Content="El camino Schmidt" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl1" Grid.Column="1" Grid.Row="2" Content="Ruta de los Tres Ríos" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl2" Grid.Column="3" Grid.Row="2" Content="Ruta de los Calderones" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl3" Grid.Column="5"  Grid.Row="2" Content="Ruta del Cares" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl4" Grid.Column="1" Grid.Row="4" Content="Senda del Oso" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl5" Grid.Column="3" Grid.Row="4" Content="Camino del Rey" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Label x:Name="lbl6" Grid.Column="5" Grid.Row="4" Content="El camino Schmidt" HorizontalAlignment="Center"  VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>
     </Grid>
 </Page>

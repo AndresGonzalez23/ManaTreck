@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Laboratorio_IPO.Dominio;
 
 namespace Laboratorio_IPO.Presentación
 {
@@ -26,7 +27,20 @@ namespace Laboratorio_IPO.Presentación
         {
             ventanaPadre = ventana;
             InitializeComponent();
-        }
+			var converter = new ImageSourceConverter();
+			img1.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[0].Foto);
+			img2.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[1].Foto);
+			img3.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[2].Foto);
+			img4.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[3].Foto);
+			img5.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[4].Foto);
+			img6.Source = (ImageSource)converter.ConvertFromString(@Ruta.todosRutas[5].Foto);
+			lbl1.Content = Ruta.todosRutas[0].Nombre;
+			lbl2.Content = Ruta.todosRutas[1].Nombre;
+			lbl3.Content = Ruta.todosRutas[2].Nombre;
+			lbl4.Content = Ruta.todosRutas[3].Nombre;
+			lbl5.Content = Ruta.todosRutas[4].Nombre;
+			lbl6.Content = Ruta.todosRutas[5].Nombre;
+		}
 
         private void btnRuta1_Click(object sender, RoutedEventArgs e)
         {
@@ -57,7 +71,5 @@ namespace Laboratorio_IPO.Presentación
         {
             ventanaPadre.MainFrame.Content = paginasRutas[0];
         }
-
-		//Hola probando
     }
 }

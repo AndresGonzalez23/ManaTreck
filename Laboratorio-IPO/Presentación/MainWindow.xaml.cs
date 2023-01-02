@@ -94,10 +94,10 @@ namespace Laboratorio_IPO.Presentación
                 ComprobarEntrada(txtContrasena.Password, password,
                 txtContrasena)) /*imgCheckContrasena*/
             {
-                VentanaPrincipal ventana = new VentanaPrincipal();
+				CargarContenidoXML();//CAMBIAR CUANDO NO SALGA LA PAGINA DE RUTAS DIRECTAMENTE
+				VentanaPrincipal ventana = new VentanaPrincipal();
                 ventana.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;
-                CargarContenidoXML();
+                this.Visibility = Visibility.Hidden;//cambiar linea para que no se generen varios msgbox
             }
         }
 
@@ -120,11 +120,11 @@ namespace Laboratorio_IPO.Presentación
 				
                 if (File.Exists(@"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpg"))
                 {
-                    foto = "/Persistencia/Guias/" + node.Attributes["Nombre"].Value + ".jpg";
+                    foto = @"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpg";
 				}
                 else if (File.Exists(@"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpeg"))
                 {
-                    foto = "/Persistencia/Guias/" + node.Attributes["Nombre"].Value + ".jpeg";
+                    foto = @"..\..\Persistencia\Guias\" + node.Attributes["Nombre"].Value + ".jpeg";
 				}
                 else {
                     foto = "";
@@ -140,27 +140,27 @@ namespace Laboratorio_IPO.Presentación
 			{
 				if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpg"))
 				{
-					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".jpg";
+					foto = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpg";
 				}
 				else if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpeg"))
 				{
-					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".jpeg";
+					foto = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpeg";
 				}
 				else
 				{
-					foto = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + ".png";
+					foto = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".png";
 				}
 				if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpg"))
 				{
-					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.jpg";
+					mapa = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpg";
 				}
 				else if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpeg"))
 				{
-					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.jpeg";
+					mapa = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.jpeg";
 				}
 				else
 				{
-					mapa = "/Persistencia/Rutas/" + node.Attributes["Nombre"].Value + "_Mapa.png";
+					mapa = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + "_Mapa.png";
 				}
 				Guia guiaDeRuta=null;
                 PDI[] puntInter = null;
@@ -176,7 +176,7 @@ namespace Laboratorio_IPO.Presentación
 					PDI.todosPDIs.Add(puntInter[i]);
 				}
 				Ruta nuevaRuta = new Ruta(node.Attributes["Nombre"].Value, node.Attributes["Provincia"].Value, node.Attributes["Origen"].Value, node.Attributes["Destino"].Value, node.Attributes["Duracion"].Value, node.Attributes["Fecha"].Value + "/" + node.Attributes["Hora"].Value, Convert.ToInt32(node.Attributes["NivelDificultad"].Value),guiaDeRuta, Convert.ToInt32(node.Attributes["Numero_excursionistas"].Value), node.Attributes["FormaAcceso"].Value, node.Attributes["FormaVuelta"].Value, node.Attributes["Material"].Value, Convert.ToBoolean(node.Attributes["ComidaIncluida"].Value), puntInter, foto, mapa);
-				Ruta.todosRutas.Add(nuevaRuta);//COMPROBAR RUTAS DE LAS FOTOS Y SU EXTENSION
+				Ruta.todosRutas.Add(nuevaRuta);
 			}
 			doc = new XmlDocument();
 			fichero = Application.GetResourceStream(new Uri("Persistencia/PDI/PDI.xml", UriKind.Relative));
@@ -185,15 +185,15 @@ namespace Laboratorio_IPO.Presentación
 			{
 				if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpg"))
 				{
-					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".jpg";
+					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpg";
 				}
 				else if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpeg"))
 				{
-					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".jpeg";
+					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpeg";
 				}
 				else
 				{
-					foto = "/Persistencia/PDI/" + node.Attributes["Nombre"].Value + ".png";
+					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".png";
 				}
 				foreach (PDI p in PDI.todosPDIs)
 				{

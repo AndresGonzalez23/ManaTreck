@@ -58,17 +58,19 @@
             </ListView.View>
         </ListView>
 
-        <Label x:Name="lblNombre" Grid.Column="1" Grid.Row="1" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12" Height="24" Width="54"/>
+        <Label x:Name="lblNombre" Grid.Column="1" Grid.Row="1" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtNombre" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17"/>
-        <Label x:Name="lblEdad" Grid.Column="1" Grid.Row="3" Content="Edad" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12" Height="25" Width="36"/>
+        <Label x:Name="lblEdad" Grid.Column="1" Grid.Row="3" Content="Edad" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtEdad" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" MinWidth="120" MinHeight="17" Margin="5,5,5,5"/>
-        <Label x:Name="lblCorreo" Grid.Column="1" Grid.Row="5" Content="Correo" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12" Height="24" Width="46"/>
+        <Label x:Name="lblCorreo" Grid.Column="1" Grid.Row="5" Content="Correo" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtCorreo" Grid.Column="1" Grid.Row="6" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17"/>
 
-        <Label x:Name="lblApellido" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Apellido" Foreground="White" FontSize="12" Height="24" Width="54"/>
+        <Label x:Name="lblApellido" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Apellido" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtApellido" Grid.Column="3" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
-        <Label x:Name="lblTelefono" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Teléfono" Foreground="White" FontSize="12" Height="25" Width="55"/>
+        <Label x:Name="lblTelefono" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Teléfono" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txttelefono" Grid.Column="3" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
+        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Margin="10,0,0,0" Background="White" Width="74"/>
+        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Margin="104,0,0,0" Background="White" Width="74"/>
 
 
     </Grid>

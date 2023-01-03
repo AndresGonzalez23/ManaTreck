@@ -39,8 +39,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Margin="10,0,0,0" Background="White" Width="74"/>
-        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Margin="104,0,0,0" Background="White" Width="74"/>
+        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="11" VerticalAlignment="Center" Margin="10,0,104,0" Background="White" Width="74"/>
+        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="11" VerticalAlignment="Center"  Margin="113,0,1,0" Background="White" Width="74"/>
 
         <StackPanel Grid.Row="1" MaxHeight="130" MaxWidth="130" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.RowSpan="6">
             <Image x:Name="imgExcursionista" Source="/Imagenes/usuarioFoto.png"/>

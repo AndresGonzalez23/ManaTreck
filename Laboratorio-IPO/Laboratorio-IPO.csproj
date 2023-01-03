@@ -144,31 +144,7 @@
     <Resource Include="Imagenes\fotoUsuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\usuarioFoto.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Imagenes\iconoOpcional.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\cerrar-sesion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\informacion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\volver.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\ruta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\guia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\excursionista.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\tresrios.jpg" />
@@ -271,6 +247,19 @@
     <Resource Include="Persistencia\Rutas\Rio Cerezuelo_Mapa.png" />
     <Resource Include="Persistencia\Rutas\Sigma de las Tainas_Mapa.PNG" />
     <Resource Include="Persistencia\Rutas\Siurana_Mapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\cerrar-sesion.png" />
+    <Resource Include="Imagenes\excursionista.png" />
+    <Resource Include="Imagenes\guia.png" />
+    <Resource Include="Imagenes\informacion.png" />
+    <Resource Include="Imagenes\menu.png" />
+    <Resource Include="Imagenes\ruta.png" />
+    <Resource Include="Imagenes\usuarioFoto.png" />
+    <Resource Include="Imagenes\volver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

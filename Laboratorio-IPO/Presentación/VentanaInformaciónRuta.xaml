@@ -40,7 +40,7 @@
 
                     <Image x:Name="imgRuta" Grid.Column="6" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5" Grid.Row="1"/>
 
-                    <Label x:Name="lblProvincia" Grid.Column="1" Grid.Row="1" Content="Provincia" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
+                    <Label x:Name="lblProvincia" Grid.Column="1" Grid.Row="1" Content="Provincia" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" />
                     <TextBox x:Name="txtProvincia" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>
                     <Label x:Name="lblHora" Grid.Column="1" Grid.Row="3" Content="Hora" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="12"/>
                     <TextBox x:Name="txtHora" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5"/>

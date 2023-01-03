@@ -145,6 +145,7 @@ namespace Laboratorio_IPO.Presentación
 				else if (File.Exists(@"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpeg"))
 				{
 					foto = @"..\..\Persistencia\Rutas\" + node.Attributes["Nombre"].Value + ".jpeg";
+					
 				}
 				else
 				{

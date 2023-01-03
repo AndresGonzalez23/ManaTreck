@@ -30,7 +30,7 @@
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="lstExcursionistas" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="9" MinWidth="160" Margin="20,0,1,47">
+        <ListView x:Name="lstExcursionistas" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="8" MinWidth="160" Margin="20,0,1,30">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

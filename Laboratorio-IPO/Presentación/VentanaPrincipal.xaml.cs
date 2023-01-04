@@ -26,7 +26,7 @@ namespace Laboratorio_IPO.Presentación
         public VentanaPrincipal()
         {
             InitializeComponent();
-            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas(), new VentanaInfoGuias(this)};
+            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas(this), new VentanaInfoGuias(this)};
             MainFrame.Content = paginas[0];
             txtUsuario.Text = nombreUsuario + "\n" + "U.Conexión: " + lastConexion;
         }

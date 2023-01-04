@@ -211,15 +211,15 @@ namespace Laboratorio_IPO.Presentación
 			{
 				if (File.Exists(@"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpg"))
 				{
-					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".jpg";
+					foto = @"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpg";
 				}
 				else if (File.Exists(@"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpeg"))
 				{
-					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".jpeg";
+					foto = @"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".jpeg";
 				}
 				else
 				{
-					foto = "/Persistencia/Excursionistas/" + node.Attributes["Nombre"].Value + ".png";
+					foto = @"..\..\Persistencia\Excursionistas\" + node.Attributes["Nombre"].Value + ".png";
 				}
 				String[] r = node.Attributes["ListadoRutas"].Value.Split(',');
 				Ruta[] excursiones = new Ruta[r.Length];

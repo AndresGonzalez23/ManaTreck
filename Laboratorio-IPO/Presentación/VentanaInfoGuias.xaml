@@ -43,7 +43,7 @@
             <Image x:Name="imgExcursionista" Source="/Imagenes/usuarioFoto.png"/>
         </StackPanel>
 
-        <ListView x:Name="lstProximas" Grid.Column="1" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,20,5,30">
+        <ListView x:Name="lstProximas" Grid.Column="1" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,20,5,30" SelectionChanged="lstProximas_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -51,7 +51,7 @@
             </ListView.View>
         </ListView>
 
-        <ListView x:Name="lstRealizadas" Grid.Column="3" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,20,5,30">
+        <ListView x:Name="lstRealizadas" Grid.Column="3" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,20,5,30" SelectionChanged="lstRealizadas_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

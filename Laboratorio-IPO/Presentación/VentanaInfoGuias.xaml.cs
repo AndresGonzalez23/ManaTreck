@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Laboratorio_IPO.Dominio;
+using Laboratorio_IPO.Presentación;
 
 namespace Laboratorio_IPO.Presentación
 {
@@ -22,9 +23,11 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class VentanaInfoGuias : Page
     {
-        public VentanaInfoGuias()
+		private VentanaPrincipal ventanaPadre;
+		public VentanaInfoGuias(VentanaPrincipal ventana)
         {
-            InitializeComponent();
+			ventanaPadre = ventana;
+			InitializeComponent();
             lstExcursionistas.Items.Clear();
 			foreach (Guia aux in Guia.todosGuias)
 			{
@@ -34,7 +37,9 @@ namespace Laboratorio_IPO.Presentación
 
 		private void lstExcursionistas_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-            Guia seleccionado=null;
+			lstProximas.Items.Clear();
+			lstRealizadas.Items.Clear();
+			Guia seleccionado=null;
 			foreach (Guia aux in Guia.todosGuias)
 			{
                 if (lstExcursionistas.SelectedItem.Equals(aux.Nombre)) {
@@ -45,7 +50,12 @@ namespace Laboratorio_IPO.Presentación
             txtApellido.Text = seleccionado.Apellidos;
             txtCorreo.Text = seleccionado.Correo;
             txtTelefono.Text = seleccionado.Telefono.ToString();
-            txtDisponibilidad.Text = seleccionado.Disponibilidad;
+			txtRating.Text = seleccionado.PuntuacionMedia.ToString();
+            txtDisponibilidad.Items.Clear();
+			foreach(String aux in seleccionado.Disponibilidad.Split(',')){
+				txtDisponibilidad.Items.Add(aux.Trim());
+			}
+			txtDisponibilidad.SelectedIndex= 0;
 			txtIdiomas.Items.Clear();
 			foreach (String aux in seleccionado.Idiomas.Split(','))
 			{
@@ -67,8 +77,6 @@ namespace Laboratorio_IPO.Presentación
 					}
 				}
 			}//se haria asi para cargar las excursiones realizadas pero es mejor de la siguiente forma*/
-			lstProximas.Items.Clear();
-			lstRealizadas.Items.Clear();
 			foreach (Ruta aux in Ruta.todosRutas)
 			{
 				if (aux.Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
@@ -104,6 +112,21 @@ namespace Laboratorio_IPO.Presentación
 					lstProximas.Items.Add(aux.Nombre);
 				}
 			}// Se haria de esta forma pero no hay excursiones proximas en persistencia*/
+		}
+
+		private void lstRealizadas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (lstRealizadas.SelectedItem != null) {
+				ventanaPadre.seleccionRutaEspecifica(lstRealizadas.SelectedItem.ToString(), 1);
+			}
+		}
+
+		private void lstProximas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (lstProximas.SelectedItem != null)
+			{
+				ventanaPadre.seleccionRutaEspecifica(lstProximas.SelectedItem.ToString(), 0);
+			}
 		}
 	}
 }

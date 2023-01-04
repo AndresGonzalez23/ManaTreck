@@ -26,7 +26,7 @@ namespace Laboratorio_IPO.Presentación
         public VentanaPrincipal()
         {
             InitializeComponent();
-            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas(), new VentanaInfoGuias()};
+            paginas = new Page[] { new PaginaRutas(this), new VentanaInfoExcursionistas(), new VentanaInfoGuias(this)};
             MainFrame.Content = paginas[0];
             txtUsuario.Text = nombreUsuario + "\n" + "U.Conexión: " + lastConexion;
         }
@@ -75,5 +75,10 @@ namespace Laboratorio_IPO.Presentación
         {
             MainFrame.Content= paginas[2];  
         }
-    }
+		public void seleccionRutaEspecifica(String ruta, int realizada)
+		{
+            PaginaRutas aux=(PaginaRutas)paginas[0];
+            aux.seleccionRutaEspecifica(ruta, realizada);
+		}
+	}
 }

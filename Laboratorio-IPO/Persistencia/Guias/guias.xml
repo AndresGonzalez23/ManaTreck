@@ -1,12 +1,12 @@
 <Guias>
 	<Guia Nombre="Alexander" Apellidos="Gomez Azaña" Foto="" Idiomas="Español, Chino, Aleman" RestriccionesDisponibilidad="Sabado, Domingo" 
-            Telefono="646514651" Correo="AGomez@gmail.com" ExcursionesRealizadas="4" ExcursionesPorRealizar="1" PuntuacionMedia="8.5"/>
+            Telefono="646514651" Correo="AGomez@gmail.com" ExcursionesRealizadas="4" ExcursionesPorRealizar="1" PuntuacionMedia="8,5"/>
   <Guia Nombre="Maria" Apellidos="Sanchez Elez" Foto="" Idiomas="Español, Ruso, Ingles" RestriccionesDisponibilidad="Miercoles" 
-            Telefono="689186564" Correo="maria_sanchez@gmail.com" ExcursionesRealizadas="3" ExcursionesPorRealizar="2" PuntuacionMedia="9.2"/>
+            Telefono="689186564" Correo="maria_sanchez@gmail.com" ExcursionesRealizadas="3" ExcursionesPorRealizar="2" PuntuacionMedia="9,2"/>
   <Guia Nombre="Paco" Apellidos="Garcia Roman" Foto="" Idiomas="Español, Aleman, Frances" RestriccionesDisponibilidad="Lunes, Jueves" 
-            Telefono="684323843" Correo="roman85@gmail.com" ExcursionesRealizadas="0" ExcursionesPorRealizar="3" PuntuacionMedia="7.3"/>
+            Telefono="684323843" Correo="roman85@gmail.com" ExcursionesRealizadas="0" ExcursionesPorRealizar="3" PuntuacionMedia="7,3"/>
   <Guia Nombre="Ricardo" Apellidos="Ortiz Uzeta" Foto="" Idiomas="Español, Ingles" RestriccionesDisponibilidad="Viernes, Sabado" 
-            Telefono="619393743" Correo="Ricardo@gmail.com" ExcursionesRealizadas="5" ExcursionesPorRealizar="1" PuntuacionMedia="7.8"/>
+            Telefono="619393743" Correo="Ricardo@gmail.com" ExcursionesRealizadas="5" ExcursionesPorRealizar="1" PuntuacionMedia="7,8"/>
   <Guia Nombre="Irene" Apellidos="Perez Guzman" Foto="" Idiomas="Español, Frances" RestriccionesDisponibilidad="Martes, Miercoles" 
-            Telefono="617884562" Correo="Ireneguzman@gmail.com" ExcursionesRealizadas="4" ExcursionesPorRealizar="2" PuntuacionMedia="8.6"/>
+            Telefono="617884562" Correo="Ireneguzman@gmail.com" ExcursionesRealizadas="4" ExcursionesPorRealizar="2" PuntuacionMedia="8,6"/>
 </Guias>

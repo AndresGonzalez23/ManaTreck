@@ -21,7 +21,7 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class PaginaRutas : Page
     {
-        public Page[] paginasRutas = new Page[] { new VentanaInformaciónRuta()};
+        public  Page[] paginasRutas = new Page[] { new VentanaInformaciónRuta()};
         private VentanaPrincipal ventanaPadre;
         public PaginaRutas(VentanaPrincipal ventana)
         {
@@ -71,5 +71,13 @@ namespace Laboratorio_IPO.Presentación
         {
             ventanaPadre.MainFrame.Content = paginasRutas[0];
         }
+        public void seleccionRutaEspecifica(String ruta, int realizada){
+            if(realizada == 0){
+				ventanaPadre.MainFrame.Content = paginasRutas[0];
+			}
+			else if(realizada == 1){
+				ventanaPadre.MainFrame.Content = paginasRutas[0];
+			}
+		}
     }
 }

@@ -116,17 +116,18 @@ namespace Laboratorio_IPO.Presentación
 
 		private void lstRealizadas_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if (lstRealizadas.SelectedItem != null) {
+			if (lstRealizadas.SelectedItem != null)
+			{
 				ventanaPadre.seleccionRutaEspecifica(lstRealizadas.SelectedItem.ToString(), 1);
 			}
 		}
 
 		private void lstProximas_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if (lstProximas.SelectedItem != null)
-			{
-				ventanaPadre.seleccionRutaEspecifica(lstProximas.SelectedItem.ToString(), 0);
-			}
+				if (lstProximas.SelectedItem != null)
+				{
+					ventanaPadre.seleccionRutaEspecifica(lstProximas.SelectedItem.ToString(), 0);
+				}
 		}
 	}
 }

@@ -42,14 +42,15 @@
                    Grid.RowSpan="12" Grid.ColumnSpan="8"
                    >
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/Imagenes/fondoInicio.jpeg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/Imagenes/fondo.jpg" Stretch="UniformToFill"/>
             </Rectangle.Fill>
         </Rectangle>
 
         <Rectangle x:Name="FndLogin" 
                    Grid.Column="1" Grid.Row="1"
                    RadiusX="10" RadiusY="10"
-                   Fill="#e26a2c"  
+                   Fill="White"
+                   Opacity="0.5"
                    Margin="1,5,3,3" 
                    Grid.ColumnSpan="6" Grid.RowSpan="10"/>
         <Label x:Name="lblNombre"

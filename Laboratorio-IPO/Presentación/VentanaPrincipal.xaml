@@ -42,23 +42,23 @@
                     <RowDefinition Height="50*"/>
                     <RowDefinition Height="746*"/>
                 </Grid.RowDefinitions>
-                <Border x:Name="brdMain" BorderThickness="1" BorderBrush="Black" Background="#867628" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <Label Content="Nombre Aplicacion" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="35"/>
+                <Border x:Name="brdMain" BorderThickness="1" BorderBrush="Black" Background="#0D2F36" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Label Content="Nombre Aplicacion" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Thin" FontSize="35" Foreground="White"/>
                 </Border>
                 <Rectangle x:Name="fndWindow" Opacity="0.9" Grid.Row="1">
                     <Rectangle.Fill>
-                        <ImageBrush ImageSource="/Imagenes/fondoInicio.jpeg"/>
+                        <ImageBrush ImageSource="/Imagenes/fondo.jpg"/>
                     </Rectangle.Fill>
                 </Rectangle>
                 <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
             </Grid>
-            <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#867628">
+            <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#0D2F36">
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#4A4922"/>
                 </Grid.Effect>
                 <StackPanel>
-                    <Grid Background="#6F5120" RenderTransformOrigin="0.5,0.5" MinHeight="58">
+                    <Grid Background="#33674E" RenderTransformOrigin="0.5,0.5" MinHeight="58">
                         <Grid.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -67,66 +67,66 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </Grid.RenderTransform>
-                        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Desplegar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#4D2A10" BorderThickness="0" Click="btnMenu_Click">
-                            <StackPanel Background="#6F5120">
+                        <Button x:Name="btnMenu" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Desplegar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#113E3B" BorderThickness="0" Click="btnMenu_Click">
+                            <StackPanel Background="#33674E">
                                 <Image x:Name="imgMenu" Source="/Imagenes/menu.png"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="btnCerrarMenu" Visibility="Collapsed"  HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Cerrar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#6F5120" BorderThickness="0" Margin="5" Click="btnCerrarMenu_Click">
-                            <StackPanel Background="#6F5120">
+                        <Button x:Name="btnCerrarMenu" Visibility="Collapsed"  HorizontalAlignment="Right" VerticalAlignment="Center" ToolTip="Cerrar Menú" MaxHeight="40" MaxWidth="40" BorderBrush="#113E3B" BorderThickness="0" Margin="5" Click="btnCerrarMenu_Click">
+                            <StackPanel Background="#33674E">
                                 <Image x:Name="imgCerrarMenu" Source="/Imagenes/volver.png"/>
                             </StackPanel>
                         </Button>
                     </Grid>
-                    <ListView x:Name="ListMenu" Background="#6F5120" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="180" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
-                        <ListViewItem x:Name="Rutas" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
-                            <Button x:Name="btnRutas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50" Click="btnRutas_Click">
+                    <ListView x:Name="ListMenu" Background="#33674E" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="180" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
+                        <ListViewItem x:Name="Rutas" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnRutas" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ir a rutas" Height="50" Click="btnRutas_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgRuta" Source="/Imagenes/ruta.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Center"/>
-                                    <TextBlock x:Name="txtRuta" Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <TextBlock x:Name="txtRuta" Text="Rutas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Excursionistas" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
-                            <Button x:Name="btnExcursionistas" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50" Click="btnExcursionistas_Click">
+                        <ListViewItem x:Name="Excursionistas" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnExcursionistas" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Excursionistas" Height="50" Click="btnExcursionistas_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgExcursionistas" Source="/Imagenes/excursionista.png" MaxWidth="40" MaxHeight="40" Width="41"/>
-                                    <TextBlock x:Name="txtExcursionistas" Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <TextBlock x:Name="txtExcursionistas" Text="Excursionistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Guias" Height="60" BorderBrush="#4D2A10" BorderThickness="1">
-                            <Button x:Name="btnGuias" BorderBrush="Transparent" BorderThickness="2" Background="#6F5120" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50" Click="btnGuias_Click">
+                        <ListViewItem x:Name="Guias" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnGuias" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver Guias" Height="50" Click="btnGuias_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgGuias" Source="/Imagenes/guia.png" MaxWidth="40" MaxHeight="40" Width="43"/>
-                                    <TextBlock x:Name="txtGuias" Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <TextBlock x:Name="txtGuias" Text="Guias Senderistas" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
                     </ListView>
                     <Rectangle x:Name="rctSeparar" MinHeight="180"/>
-                    <ListView x:Name="ListOptions" MinHeight="195" Background="#867628" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
-                        <ListViewItem x:Name="AcercaDe" Height="60" BorderBrush="#BBA647" BorderThickness="1">
-                            <Button x:Name="btnAcerca" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50" Click="btnAcerca_Click">
+                    <ListView x:Name="ListOptions" MinHeight="195" Background="#33674E" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="62" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
+                        <ListViewItem x:Name="AcercaDe" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnAcerca" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Acerca de" Height="50" Click="btnAcerca_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgAcercaDe" Source="/Imagenes/informacion.png" MaxWidth="40" MaxHeight="40" HorizontalAlignment="Stretch" Margin="3"/>
-                                    <TextBlock x:Name="txtAcercaDe" Text="Acerca De" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <TextBlock x:Name="txtAcercaDe" Text="Acerca De" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="CerrarSesion" Height="60" BorderBrush="#BBA647" BorderThickness="1">
-                            <Button x:Name="btnSesion" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Cerrar Sesión" Height="50" Click="btnSesion_Click">
+                        <ListViewItem x:Name="CerrarSesion" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnSesion" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Cerrar Sesión" Height="50" Click="btnSesion_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgSalir" Source="/Imagenes/cerrar-sesion.png" MaxWidth="40" MaxHeight="40" Width="41" Margin="4"/>
-                                    <TextBlock x:Name="txtSalir" Text="Cerrar Sesión" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10"/>
+                                    <TextBlock x:Name="txtSalir" Text="Cerrar Sesión" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20,10" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-                        <ListViewItem x:Name="Usuario" Height="60" BorderBrush="#BBA647" BorderThickness="1">
-                            <Button x:Name="btnUsuario" BorderBrush="Transparent" BorderThickness="2" Background="#867628" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver usuario">
+                        <ListViewItem x:Name="Usuario" Height="60" BorderBrush="#113E3B" BorderThickness="1">
+                            <Button x:Name="btnUsuario" BorderBrush="Transparent" BorderThickness="2" Background="#33674E" MinHeight="5" MinWidth="5" HorizontalAlignment="Center" ToolTip="Ver usuario">
                                 <StackPanel Orientation="Horizontal">
                                     <Image x:Name="imgUsuario" Source="/Imagenes/usuarioFoto.png" MaxHeight="40" MaxWidth="40" Margin="3"/>
-                                    <TextBlock x:Name="txtUsuario" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="5"/>
+                                    <TextBlock x:Name="txtUsuario" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="5" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </ListViewItem>

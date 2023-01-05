@@ -15,17 +15,19 @@ namespace Laboratorio_IPO.Dominio
 		private string _nombre;
 		private string _apellidos;
 		private string _foto;
+		private string _correo;
 		private int _edad;
 		private long _telefono;
 		private Ruta[] _rutas;
-		public Excursionista(string nombre, string apellidos, string foto, int edad, long telefono, Ruta[] rutas)
+		public Excursionista(string nombre, string apellidos, string foto, int edad, long telefono, Ruta[] rutas, string correo)
 		{
 			Nombre = nombre;
-			Apellidos= apellidos;
+			Apellidos = apellidos;
 			Foto = foto;
 			Edad = edad;
 			Telefono = telefono;
 			Rutas = rutas;
+			Correo = correo;
 		}
 
 		public string Nombre { get => _nombre; set => _nombre = value; }
@@ -34,5 +36,6 @@ namespace Laboratorio_IPO.Dominio
 		public int Edad { get => _edad; set => _edad = value; }
 		public long Telefono { get => _telefono; set => _telefono = value; }
 		internal Ruta[] Rutas { get => _rutas; set => _rutas = value; }
+		public string Correo { get => _correo; set => _correo = value; }
 	}
 }

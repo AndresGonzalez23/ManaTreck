@@ -51,7 +51,7 @@ namespace Laboratorio_IPO.Presentación
 			}
 			txtNombre.Text = seleccionado.Nombre;
 			txtApellido.Text = seleccionado.Apellidos;
-			txtCorreo.Text = "añadir correo";
+			txtCorreo.Text = seleccionado.Correo;
 			txttelefono.Text = seleccionado.Telefono.ToString();
 			txtEdad.Text = seleccionado.Edad.ToString();
 			var converter = new ImageSourceConverter();
@@ -69,12 +69,12 @@ namespace Laboratorio_IPO.Presentación
 					}
 				}
 			}//se haria asi para cargar las excursiones realizadas pero es mejor de la siguiente forma*/
-			/*foreach (Ruta aux in seleccionado.Rutas)
+			foreach (Ruta aux in seleccionado.Rutas)
 			{
 				lstRealizadas.Items.Add(aux.Nombre);
-			}*///------------------------------------------------------------------
+			}
 			var random = new Random(Environment.TickCount);
-			int[] noRepetir = new int[random.Next(0, 5)];
+			int[] noRepetir = new int[random.Next(1, 5)];
 			for (int i = 0; i < noRepetir.Length; i++)
 			{
 				int y = random.Next(0, Ruta.todosRutas.Count);

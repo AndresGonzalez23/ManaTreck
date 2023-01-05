@@ -223,7 +223,7 @@ namespace Laboratorio_IPO.Presentación
 				}
 				String[] r = node.Attributes["ListadoRutas"].Value.Split(',');
 				Ruta[] excursiones = new Ruta[r.Length];
-				for (int i = 0; i == r.Length; i++)
+				for (int i = 0; i < r.Length; i++)
 				{
 					foreach (Ruta x in Ruta.todosRutas)
 					{
@@ -233,7 +233,7 @@ namespace Laboratorio_IPO.Presentación
 						}
 					}
 				}
-				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, foto, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones);
+				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, foto, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones, node.Attributes["Correo"].Value);
 				Excursionista.todosExcursionistas.Add(nuevoExcur);
 			}
 		}

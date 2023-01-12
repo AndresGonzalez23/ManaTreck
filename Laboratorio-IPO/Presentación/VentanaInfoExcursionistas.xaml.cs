@@ -118,5 +118,17 @@ namespace Laboratorio_IPO.Presentación
 			}
 			lstProximas.UnselectAll();
 		}
+
+		private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+		{
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtEdad.Clear();
+			txttelefono.Clear();
+			txtCorreo.Clear();
+            lstRealizadas.Items.Clear();
+            lstProximas.Items.Clear();
+            imgExcursionista.Source = null;
+        }
 	}
 }

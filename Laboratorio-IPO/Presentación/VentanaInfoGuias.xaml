@@ -32,7 +32,7 @@
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="lstExcursionistas" Grid.Column="4" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="11" MinWidth="160" Margin="10,46,1,10" SelectionChanged="lstExcursionistas_SelectionChanged">
+        <ListView x:Name="lstExcursionistas" Grid.Column="4" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="11" MinWidth="160" Margin="25,46,1,2" SelectionChanged="lstExcursionistas_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -41,12 +41,14 @@
         </ListView>
         <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="11" VerticalAlignment="Center" Margin="10,0,104,0" Background="White" Width="74"/>
         <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="11" VerticalAlignment="Center"  Margin="113,0,1,0" Background="White" Width="74"/>
+        <Button x:Name="btnLimpiar" Grid.Column="3" Content="Limpiar" Grid.Row="11" HorizontalAlignment="Right" VerticalAlignment="Center" Background="White" Width="74" Margin="0,0,5,0" Click="btnLimpiar_Click"/>
 
         <StackPanel Grid.Row="1" MaxHeight="130" MaxWidth="130" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.RowSpan="6">
             <Image x:Name="imgExcursionista" Source="/Imagenes/usuarioFoto.png"/>
         </StackPanel>
 
-        <ListView x:Name="lstProximas" Grid.Column="1" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,10,5,40" SelectionChanged="lstProximas_SelectionChanged">
+        <Label x:Name="lblProximas" Grid.Column="1" Grid.Row="9" Content="Proximas Rutas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Height="25" Width="120"/>
+        <ListView x:Name="lstProximas" Grid.Column="1" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Margin="5,0,5,4" SelectionChanged="lstProximas_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -54,7 +56,8 @@
             </ListView.View>
         </ListView>
 
-        <ListView x:Name="lstRealizadas" Grid.Column="3" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Grid.RowSpan="2" Margin="5,10,5,40" SelectionChanged="lstRealizadas_SelectionChanged">
+        <Label x:Name="lblRealizadas" Grid.Column="3" Grid.Row="9" Content="Rutas Realizadas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Height="25" Width="120"/>
+        <ListView x:Name="lstRealizadas" Grid.Column="3" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Margin="5,2,5,2" SelectionChanged="lstRealizadas_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -63,20 +66,21 @@
         </ListView>
 
         <Label x:Name="lblNombre" Grid.Column="1" Grid.Row="1" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtNombre" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17"/>
+        <TextBox x:Name="txtNombre" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17" MaxLength="25"/>
         <Label x:Name="lblTelefono" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Teléfono" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtTelefono" Grid.Column="1" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
+        <TextBox x:Name="txtTelefono" Grid.Column="1" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="9"/>
         <Label x:Name="lblDisponibilidad" Grid.Column="1" Grid.Row="5" Content="Disponibilidad" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <ComboBox x:Name="txtDisponibilidad" Grid.Column="1" Grid.Row="6" MinHeight="20" MinWidth="120" VerticalAlignment="Center" Margin="5,5,5,5"/>
+        <ComboBox x:Name="txtDisponibilidad" Grid.Column="1" Grid.Row="6" MinHeight="20" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblRating" Grid.Column="1" Grid.Row="7" Content="Valoración" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtRating" Grid.Column="1" Grid.Row="8" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
+        <TextBox x:Name="txtRating" Grid.Column="1" Grid.Row="8" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="25"/>
 
         <Label x:Name="lblApellido" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Apellido" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtApellido" Grid.Column="3" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
+        <TextBox x:Name="txtApellido" Grid.Column="3" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="25"/>
         <Label x:Name="lblCorreo" Grid.Column="3" Grid.Row="3" Content="Correo Electrónico" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtCorreo" Grid.Column="3" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
         <Label x:Name="lblIdiomas" Grid.Column="3" Grid.Row="5" Content="Idiomas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <ComboBox x:Name="txtIdiomas" Grid.Column="3" Grid.Row="6" MinHeight="20" MinWidth="120" VerticalAlignment="Center" Margin="5,5,5,5"/>
+        <ComboBox x:Name="txtIdiomas" Grid.Column="3" Grid.Row="6" MinHeight="20" MinWidth="120" Margin="5,5,5,5"/>
+
 
     </Grid>
 </Page>

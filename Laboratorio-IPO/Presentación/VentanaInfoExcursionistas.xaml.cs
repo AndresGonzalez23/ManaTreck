@@ -136,6 +136,7 @@ namespace Laboratorio_IPO.Presentación
 			txtCorreo.Clear();
             lstRealizadas.Items.Clear();
             lstProximas.Items.Clear();
+			lstExcursionistas.UnselectAll();
             imgExcursionista.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Imagenes\usuarioFoto.png");
 			txtNombre.IsEnabled = true;
 			txtApellido.IsEnabled = true;

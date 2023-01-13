@@ -30,7 +30,7 @@
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="lstExcursionistas" Grid.Column="4" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="9" MinWidth="160" Margin="25,46,1,0" SelectionChanged="lstExcursionistas_SelectionChanged">
+        <ListView x:Name="lstExcursionistas" Grid.Column="4" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="9" MinWidth="160" Margin="25,46,1,0" SelectionChanged="lstExcursionistas_SelectionChanged" ScrollViewer.CanContentScroll="True" Height="354" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -71,8 +71,8 @@
         <Label x:Name="lblTelefono" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Teléfono" Foreground="White" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Height="24" Margin="17,0,0,0" Width="68"/>
         <TextBox x:Name="txttelefono" Grid.Column="3" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="9"/>
 
-        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="9" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="20"/>
-        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="9" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="20"/>
+        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="9" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="20" Click="btnEliminar_Click"/>
+        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="9" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="20" Click="btnAñadir_Click"/>
         <Button x:Name="btnLimpiar" Grid.Column="3" Content="Limpiar" Grid.Row="9" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Width="74" Margin="118,0,0,0" Click="btnLimpiar_Click" Height="20"/>
         
 

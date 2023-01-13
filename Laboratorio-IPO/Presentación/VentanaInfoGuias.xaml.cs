@@ -37,81 +37,88 @@ namespace Laboratorio_IPO.Presentación
 
 		private void lstExcursionistas_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			lstProximas.Items.Clear();
-			lstRealizadas.Items.Clear();
-			Guia seleccionado=null;
-			foreach (Guia aux in Guia.todosGuias)
-			{
-                if (lstExcursionistas.SelectedItem.Equals(aux.Nombre)) {
-                    seleccionado= aux;
-                }
-			}
-            txtNombre.Text= seleccionado.Nombre;
-            txtApellido.Text = seleccionado.Apellidos;
-            txtCorreo.Text = seleccionado.Correo;
-            txtTelefono.Text = seleccionado.Telefono.ToString();
-			txtRating.Text = seleccionado.PuntuacionMedia.ToString();
-            txtDisponibilidad.Items.Clear();
-			foreach(String aux in seleccionado.Disponibilidad.Split(',')){
-				txtDisponibilidad.Items.Add(aux.Trim());
-			}
-			txtDisponibilidad.SelectedIndex= 0;
-			txtIdiomas.Items.Clear();
-			foreach (String aux in seleccionado.Idiomas.Split(','))
-			{
-				txtIdiomas.Items.Add(aux.Trim());
-			}
-			txtIdiomas.SelectedIndex = 1;
-			var converter = new ImageSourceConverter();
-			imgExcursionista.Source = (ImageSource)converter.ConvertFromString(seleccionado.Foto);
-			/*for (int i = 0; i == seleccionado.ExcursionesRealizadas; i++) {
-				bool control=false;
-				int x = 0;
-				while (control) {
-					if (Ruta.todosRutas[x].Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
-					{
-						lstRealizadas.Items.Add(Ruta.todosRutas[x].Nombre);
-					}
-					else {
-						x++;
+			if (lstExcursionistas.SelectedItem != null) {
+				txtNombre.IsEnabled= false;
+				txtApellido.IsEnabled= false;
+				txtCorreo.IsEnabled= false;
+				txtRating.IsEnabled= false;
+				txtTelefono.IsEnabled= false;
+				lstProximas.Items.Clear();
+				lstRealizadas.Items.Clear();
+				Guia seleccionado = null;
+				foreach (Guia aux in Guia.todosGuias)
+				{
+					if (lstExcursionistas.SelectedItem.Equals(aux.Nombre)) {
+						seleccionado = aux;
 					}
 				}
-			}//se haria asi para cargar las excursiones realizadas pero es mejor de la siguiente forma*/
-			foreach (Ruta aux in Ruta.todosRutas)
-			{
-				if (aux.Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
-				{
-					lstRealizadas.Items.Add(aux.Nombre);
+				txtNombre.Text = seleccionado.Nombre;
+				txtApellido.Text = seleccionado.Apellidos;
+				txtCorreo.Text = seleccionado.Correo;
+				txtTelefono.Text = seleccionado.Telefono.ToString();
+				txtRating.Text = seleccionado.PuntuacionMedia.ToString();
+				txtDisponibilidad.Items.Clear();
+				foreach (String aux in seleccionado.Disponibilidad.Split(',')) {
+					txtDisponibilidad.Items.Add(aux.Trim());
 				}
-			}
-			var random = new Random(Environment.TickCount);
-			int[] noRepetir=new int[seleccionado.ExcursionesPorRealizar];
-			for (int i = 0; i < seleccionado.ExcursionesPorRealizar; i++)
-			{
-				int y = random.Next(0, Ruta.todosRutas.Count);
-				bool control=false;
-				do
+				txtDisponibilidad.SelectedIndex = 0;
+				txtIdiomas.Items.Clear();
+				foreach (String aux in seleccionado.Idiomas.Split(','))
 				{
-					control = false;
-					foreach (int n in noRepetir)
-					{
-						if (n == y)
+					txtIdiomas.Items.Add(aux.Trim());
+				}
+				txtIdiomas.SelectedIndex = 1;
+				var converter = new ImageSourceConverter();
+				imgExcursionista.Source = (ImageSource)converter.ConvertFromString(seleccionado.Foto);
+				/*for (int i = 0; i == seleccionado.ExcursionesRealizadas; i++) {
+					bool control=false;
+					int x = 0;
+					while (control) {
+						if (Ruta.todosRutas[x].Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
 						{
-							control = true;
-							y = random.Next(0, Ruta.todosRutas.Count);
+							lstRealizadas.Items.Add(Ruta.todosRutas[x].Nombre);
+						}
+						else {
+							x++;
 						}
 					}
-				} while (control);
-				lstProximas.Items.Add(Ruta.todosRutas[y].Nombre);
-				noRepetir[i] = y;
-			}
-			/*foreach (Ruta aux in Ruta.rutasProximas)
-			{
-				if (aux.Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
+				}//se haria asi para cargar las excursiones realizadas pero es mejor de la siguiente forma*/
+				foreach (Ruta aux in Ruta.todosRutas)
 				{
-					lstProximas.Items.Add(aux.Nombre);
+					if (aux.Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
+					{
+						lstRealizadas.Items.Add(aux.Nombre);
+					}
 				}
-			}// Se haria de esta forma pero no hay excursiones proximas en persistencia*/
+				var random = new Random(Environment.TickCount);
+				int[] noRepetir = new int[seleccionado.ExcursionesPorRealizar];
+				for (int i = 0; i < seleccionado.ExcursionesPorRealizar; i++)
+				{
+					int y = random.Next(0, Ruta.todosRutas.Count);
+					bool control = false;
+					do
+					{
+						control = false;
+						foreach (int n in noRepetir)
+						{
+							if (n == y)
+							{
+								control = true;
+								y = random.Next(0, Ruta.todosRutas.Count);
+							}
+						}
+					} while (control);
+					lstProximas.Items.Add(Ruta.todosRutas[y].Nombre);
+					noRepetir[i] = y;
+				}
+				/*foreach (Ruta aux in Ruta.rutasProximas)
+				{
+					if (aux.Guia.Nombre.Equals(lstExcursionistas.SelectedItem))
+					{
+						lstProximas.Items.Add(aux.Nombre);
+					}
+				}// Se haria de esta forma pero no hay excursiones proximas en persistencia*/
+			}
 		}
 
 		private void lstRealizadas_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -143,7 +150,61 @@ namespace Laboratorio_IPO.Presentación
 			txtTelefono.Clear();
 			lstRealizadas.Items.Clear();
 			lstProximas.Items.Clear();
-			imgExcursionista.Source = null;
+			lstExcursionistas.UnselectAll();
+			imgExcursionista.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"..\..\Imagenes\usuarioFoto.png");
+			txtNombre.IsEnabled = true;
+			txtApellido.IsEnabled = true;
+			txtCorreo.IsEnabled = true;
+			txtRating.IsEnabled = true;
+			txtTelefono.IsEnabled = true;
+		}
+
+		private void btnEliminar_Click(object sender, RoutedEventArgs e)
+		{
+			if(lstExcursionistas.SelectedItem != null){
+				Guia eliminado=null;
+				bool eliminar=false;
+				foreach (Guia aux in Guia.todosGuias)
+				{
+					if (lstExcursionistas.SelectedItem.Equals(aux.Nombre))
+					{
+						eliminado=aux;
+						eliminar=true;
+					}
+				}
+				if(eliminar) {
+					lstExcursionistas.UnselectAll();
+					Guia.todosGuias.Remove(eliminado);
+					lstExcursionistas.Items.Remove(eliminado.Nombre);
+					btnLimpiar_Click(sender, e);
+				}
+			}
+		}
+
+		private void btnAñadir_Click(object sender, RoutedEventArgs e)
+		{
+			bool existente = true;
+			foreach (Guia aux in Guia.todosGuias)
+			{
+				if (txtNombre.Text.Equals(aux.Nombre))
+				{
+					existente=false;
+				}
+			}
+			if (lstExcursionistas.SelectedItem == null)
+			{
+				if (txtNombre.Text != "" && txtApellido.Text != "" && txtCorreo.Text != "" && txtRating.Text != "" && txtTelefono.Text != "" && existente)
+				{
+					string disponibilidad = Microsoft.VisualBasic.Interaction.InputBox("Inserte los dias disponibles separados por ', '", "Disponibilidad", "Lunes, Martes, Miercoles");
+					string idiomas = Microsoft.VisualBasic.Interaction.InputBox("Inserte los idiomas hablados separados por ', '", "Idiomas", "Español, Ruso, Aleman");
+					Guia nuevoguia = new Guia(txtNombre.Text, txtApellido.Text, @"..\..\Imagenes\usuarioFoto.png", idiomas, disponibilidad, long.Parse(txtTelefono.Text), txtCorreo.Text, 0, 0, double.Parse(txtRating.Text));
+					Guia.todosGuias.Add(nuevoguia);
+					lstExcursionistas.Items.Add(nuevoguia.Nombre);
+				}
+				else {
+					MessageBox.Show("El nombre ya existe o falta por rellenar algun campo", "Error al añadir");
+				}
+			}
 		}
 	}
 }

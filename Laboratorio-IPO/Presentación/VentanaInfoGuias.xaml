@@ -39,8 +39,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="11" VerticalAlignment="Center" Margin="10,0,104,0" Background="White" Width="74"/>
-        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="11" VerticalAlignment="Center"  Margin="113,0,1,0" Background="White" Width="74"/>
+        <Button x:Name="btnEliminar" Grid.Column="4" Content="Eliminar" Grid.Row="11" VerticalAlignment="Center" Margin="10,0,104,0" Background="White" Width="74" Click="btnEliminar_Click"/>
+        <Button x:Name="btnAñadir" Grid.Column="4" Content="Añadir" Grid.Row="11" VerticalAlignment="Center"  Margin="113,0,1,0" Background="White" Width="74" Click="btnAñadir_Click"/>
         <Button x:Name="btnLimpiar" Grid.Column="3" Content="Limpiar" Grid.Row="11" HorizontalAlignment="Right" VerticalAlignment="Center" Background="White" Width="74" Margin="0,0,5,0" Click="btnLimpiar_Click"/>
 
         <StackPanel Grid.Row="1" MaxHeight="130" MaxWidth="130" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.RowSpan="6">

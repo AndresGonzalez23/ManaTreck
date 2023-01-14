@@ -27,19 +27,20 @@
             <RowDefinition Height="26*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="255*"/>
-            <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="61*"/>
-            <ColumnDefinition Width="64*"/>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="68*"/>
-            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="350*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="317*"/>
         </Grid.ColumnDefinitions>
         <Rectangle x:Name="FndWindow" 
                    Grid.Column="0" Grid.Row="0"
                    RadiusX="1" RadiusY="1" Opacity="0.9"
-                   Grid.RowSpan="12" Grid.ColumnSpan="8"
+                   Grid.RowSpan="12" Grid.ColumnSpan="9"
                    >
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Imagenes/fondo.jpg" Stretch="UniformToFill"/>
@@ -52,13 +53,13 @@
                    Fill="White"
                    Opacity="0.5"
                    Margin="1,5,3,3" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="10"/>
+                   Grid.ColumnSpan="7" Grid.RowSpan="10"/>
         <Label x:Name="lblNombre"
                Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2"
                FontSize="30"
                Content="ManaTreck" 
                Margin="0,5,0,10" 
-               HorizontalAlignment="Center"/>
+               HorizontalAlignment="Center" Width="152"/>
         <TextBox x:Name="txtUsuario" 
                  Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="4"
                  VerticalContentAlignment="Center"
@@ -68,8 +69,7 @@
         <Image x:Name="imgUsuario" 
                Grid.Column="2" Grid.Row="5"
                HorizontalAlignment="Center" VerticalAlignment="Center"
-               Source="/Imagenes/fotoUsuario.png"
-               Margin="0,2,0,2"/>
+               Source="/Imagenes/fotoUsuario.png" Height="38" Width="39"/>
         <Label x:Name="lblUsuario" 
                Grid.Column="3"  Grid.Row="5" Grid.ColumnSpan="3"
                Content="Usuario" 
@@ -94,7 +94,7 @@
                Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2"
                Source="/Imagenes/icono.png" 
                Stretch="Fill"
-               Margin="12,0,12,0" VerticalAlignment="Center"
+               Margin="12,0,12,0" VerticalAlignment="Center" Height="162"
                />
         <Button x:Name="btnLogin" Grid.Column="3" Grid.Row="10" Grid.ColumnSpan="2" 
                 Content="Aceptar" FontSize="15"
@@ -104,5 +104,7 @@
                 Click="btnLogin_Click"/>
         <Image x:Name="imgContrasena" 
                Grid.Column="2" Grid.Row="8" Margin="0,2,0,2" Source="/Imagenes/candado-cerrado.png"/>
+        <Image x:Name="imgCheckUsuario" Grid.Column="6" HorizontalAlignment="Left" Height="45" Grid.RowSpan="2" Grid.Row="6" VerticalAlignment="Top" Width="45"/>
+        <Image x:Name="imgCheckContrasena" Grid.Column="6" HorizontalAlignment="Left" Height="45" Grid.RowSpan="2" Grid.Row="9" VerticalAlignment="Top" Width="45"/>
     </Grid>
 </Window>

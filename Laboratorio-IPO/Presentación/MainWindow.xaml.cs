@@ -25,6 +25,9 @@ namespace Laboratorio_IPO.Presentación
     /// </summary>
     public partial class MainWindow : Window
     {
+        private BitmapImage imagCheck = new BitmapImage(new Uri("/imagenes/check.png", UriKind.Relative));
+        private BitmapImage imagCross = new BitmapImage(new Uri("/imagenes/cross.png", UriKind.Relative));
+
         private string usuario = "usuario";
         private string password = "usuario";
 
@@ -39,7 +42,7 @@ namespace Laboratorio_IPO.Presentación
             {
 
                 if (ComprobarEntrada(txtUsuario.Text, usuario,
-                                    txtUsuario))/*imgCheckUsuario*/
+                                    txtUsuario, imgCheckUsuario))
                 {
 
                     //habilita el hueco de contraseña
@@ -53,7 +56,7 @@ namespace Laboratorio_IPO.Presentación
         }
 
         private Boolean ComprobarEntrada(string valorIntroducido, string valorValido,
-                                         Control componenteEntrada)/*Image imagenFeedBack*/
+                                         Control componenteEntrada, Image imagenFeedBack)
         {
             Boolean valido = false;
             if (valorIntroducido.Equals(valorValido))
@@ -62,7 +65,7 @@ namespace Laboratorio_IPO.Presentación
                 componenteEntrada.BorderBrush = Brushes.Green;
                 componenteEntrada.Background = Brushes.LightGreen;
                 // imagen al lado de la entrada de usuario --> check
-                //imagenFeedBack.Source = imagCheck;
+                imagenFeedBack.Source = imagCheck;
                 valido = true;
             }
             else
@@ -71,7 +74,7 @@ namespace Laboratorio_IPO.Presentación
                 componenteEntrada.BorderBrush = Brushes.Red;
                 componenteEntrada.Background = Brushes.LightCoral;
                 // imagen al lado de la entrada de usuario --> cross
-                //imagenFeedBack.Source = imagCross;
+                imagenFeedBack.Source = imagCross;
                 valido = false;
             }
             return valido;
@@ -80,7 +83,7 @@ namespace Laboratorio_IPO.Presentación
         private void txtContrasena_KeyUp(object sender, KeyEventArgs e)
         {
             if (ComprobarEntrada(txtContrasena.Password, password,
-                                    txtContrasena)) /*imgCheckContrasena*/
+                                    txtContrasena, imgCheckContrasena))
             {
                 btnLogin.Focus();
             }
@@ -89,10 +92,10 @@ namespace Laboratorio_IPO.Presentación
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             if (ComprobarEntrada(txtUsuario.Text, usuario,
-                txtUsuario) /*imgCheckUsuario*/
+                txtUsuario, imgCheckUsuario)
                 &&
                 ComprobarEntrada(txtContrasena.Password, password,
-                txtContrasena)) /*imgCheckContrasena*/
+                txtContrasena, imgCheckContrasena))
             {
 				CargarContenidoXML();//CAMBIAR CUANDO NO SALGA LA PAGINA DE RUTAS DIRECTAMENTE
 				VentanaPrincipal ventana = new VentanaPrincipal();

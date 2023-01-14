@@ -43,7 +43,7 @@
                     <RowDefinition Height="746*"/>
                 </Grid.RowDefinitions>
                 <Border x:Name="brdMain" BorderThickness="1" BorderBrush="Black" Background="#0D2F36" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <Label Content="Nombre Aplicacion" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Thin" FontSize="35" Foreground="White"/>
+                    <Label Content="ManaTrek" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Thin" FontSize="35" Foreground="White"/>
                 </Border>
                 <Rectangle x:Name="fndWindow" Opacity="0.9" Grid.Row="1">
                     <Rectangle.Fill>

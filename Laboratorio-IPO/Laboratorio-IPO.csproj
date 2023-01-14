@@ -262,5 +262,11 @@
     <Resource Include="Imagenes\usuarioFoto.png" />
     <Resource Include="Imagenes\volver.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\check.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

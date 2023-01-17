@@ -79,5 +79,5 @@ namespace Laboratorio_IPO.Presentación
             PaginaRutas aux=(PaginaRutas)paginas[0];
             aux.seleccionRutaEspecifica(ruta, realizada);
 		}
-	}
+    }
 }

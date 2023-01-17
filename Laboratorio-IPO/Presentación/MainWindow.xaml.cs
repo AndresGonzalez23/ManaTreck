@@ -100,15 +100,12 @@ namespace Laboratorio_IPO.Presentación
 				CargarContenidoXML();//CAMBIAR CUANDO NO SALGA LA PAGINA DE RUTAS DIRECTAMENTE
 				VentanaPrincipal ventana = new VentanaPrincipal();
                 ventana.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;//cambiar linea para que no se generen varios msgbox
+                this.Visibility = Visibility.Collapsed;//cambiar linea para que no se generen varios msgbox
             }
         }
 
         private void VentanaLogin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //Quitar y cambiar
-
-            MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
             App.Current.Shutdown();
         }
 		private void CargarContenidoXML()
@@ -240,5 +237,11 @@ namespace Laboratorio_IPO.Presentación
 				Excursionista.todosExcursionistas.Add(nuevoExcur);
 			}
 		}
+
+		private void btnCancelar_Click(object sender, RoutedEventArgs e)
+		{
+            MessageBox.Show("Gracias por usar nuestra aplicación...", "Adiós");
+            App.Current.Shutdown();
+        }
 	}
 }

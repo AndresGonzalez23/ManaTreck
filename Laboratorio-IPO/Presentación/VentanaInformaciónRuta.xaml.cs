@@ -294,5 +294,17 @@ namespace Laboratorio_IPO.Presentación
             }
             return prueba;
         }
+
+        private void btnPDIR_Click(object sender, RoutedEventArgs e)
+        {
+            VentanaPDI ventanaPDI = new VentanaPDI();
+            ventanaPDI.Visibility = Visibility.Visible;
+        }
+
+        private void btnPDI_Click(object sender, RoutedEventArgs e)
+        {
+            VentanaPDI ventanaPDI = new VentanaPDI();
+            ventanaPDI.Visibility = Visibility.Visible;
+        }
     }
 }

@@ -47,7 +47,7 @@
             <Image x:Name="imgExcursionista" Source="/Imagenes/usuarioFoto.png"/>
         </StackPanel>
 
-        <Label x:Name="lblProximas" Grid.Column="1" Grid.Row="9" Content="Proximas Rutas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Height="25" Width="120"/>
+        <Label x:Name="lblProximas" Grid.Column="1" Grid.Row="9" Content="Proximas Rutas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <ListView x:Name="lstProximas" Grid.Column="1" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Margin="5,0,5,4" SelectionChanged="lstProximas_SelectionChanged">
             <ListView.View>
                 <GridView>
@@ -56,7 +56,7 @@
             </ListView.View>
         </ListView>
 
-        <Label x:Name="lblRealizadas" Grid.Column="3" Grid.Row="9" Content="Rutas Realizadas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Height="25" Width="120"/>
+        <Label x:Name="lblRealizadas" Grid.Column="3" Grid.Row="9" Content="Rutas Realizadas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <ListView x:Name="lstRealizadas" Grid.Column="3" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" MinWidth="150" MinHeight="80" Margin="5,2,5,2" SelectionChanged="lstRealizadas_SelectionChanged">
             <ListView.View>
                 <GridView>

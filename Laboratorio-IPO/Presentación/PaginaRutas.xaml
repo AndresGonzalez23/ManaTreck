@@ -27,34 +27,34 @@
         </Grid.ColumnDefinitions>
         <Frame x:Name="FrameRutas" Grid.ColumnSpan="7" Grid.RowSpan="5"/>
 
-        <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta1_Click">
+        <Button x:Name="btnRuta1" Grid.Column="1" Grid.Row="1" BorderBrush="White" BorderThickness="2" Click="btnRuta1_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-                <Image x:Name="img1" Height="150" Width="150" Source="/Imagenes/tresrios.jpg"/>
+                <Image x:Name="img1" Source="/Imagenes/tresrios.jpg"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnRuta2" Grid.Column="3" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta2_Click">
+        <Button x:Name="btnRuta2" Grid.Column="3" Grid.Row="1" BorderBrush="White" BorderThickness="2" Click="btnRuta2_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-				<Image x:Name="img2" Height="150" Width="150" Source="/Imagenes/calderones.jpg"/>
+				<Image x:Name="img2" Source="/Imagenes/calderones.jpg"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnRuta3" Grid.Column="5" Grid.Row="1" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta3_Click">
+        <Button x:Name="btnRuta3" Grid.Column="5" Grid.Row="1" BorderBrush="White" BorderThickness="2" Click="btnRuta3_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-				<Image x:Name="img3" Height="150" Width="150" Source="/Imagenes/CARES.jpg"/>
+				<Image x:Name="img3" Source="/Imagenes/CARES.jpg"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnRuta4" Grid.Column="1" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta4_Click">
+        <Button x:Name="btnRuta4" Grid.Column="1" Grid.Row="3" BorderBrush="White" BorderThickness="2" Click="btnRuta4_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-				<Image x:Name="img4" Height="150" Width="150" Source="/Imagenes/oso.jpg"/>
+				<Image x:Name="img4" Source="/Imagenes/oso.jpg"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnRuta5" Grid.Column="3" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta5_Click">
+        <Button x:Name="btnRuta5" Grid.Column="3" Grid.Row="3" BorderBrush="White" BorderThickness="2" Click="btnRuta5_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-				<Image x:Name="img5" Height="150" Width="150" Source="/Imagenes/rey.jpg"/>
+				<Image x:Name="img5" Source="/Imagenes/rey.jpg" Height="194"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnRuta6" Grid.Column="5" Grid.Row="3" Height="150" Width="150" BorderBrush="White" BorderThickness="2" Click="btnRuta6_Click">
+        <Button x:Name="btnRuta6" Grid.Column="5" Grid.Row="3" BorderBrush="White" BorderThickness="2" Click="btnRuta6_Click" MaxWidth="200" MaxHeight="200">
             <StackPanel>
-				<Image x:Name="img6" Height="150" Width="150" Source="/Imagenes/schmidt.jpg"/>
+				<Image x:Name="img6" Source="/Imagenes/schmidt.jpg"/>
             </StackPanel>
         </Button>
         <Label x:Name="lbl1" Grid.Column="1" Grid.Row="2" Content="Ruta de los Tres Ríos" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White"/>

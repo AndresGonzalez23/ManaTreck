@@ -97,10 +97,10 @@ namespace Laboratorio_IPO.Presentación
                 ComprobarEntrada(txtContrasena.Password, password,
                 txtContrasena, imgCheckContrasena))
             {
-				CargarContenidoXML();//CAMBIAR CUANDO NO SALGA LA PAGINA DE RUTAS DIRECTAMENTE
+				CargarContenidoXML();
 				VentanaPrincipal ventana = new VentanaPrincipal();
                 ventana.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Collapsed;//cambiar linea para que no se generen varios msgbox
+                this.Visibility = Visibility.Collapsed;
             }
         }
 

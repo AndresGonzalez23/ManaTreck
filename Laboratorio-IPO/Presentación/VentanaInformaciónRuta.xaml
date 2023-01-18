@@ -41,26 +41,26 @@
                     <Image x:Name="imgRuta" Grid.Column="6" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5" Grid.Row="1"/>
 
                     <Label x:Name="lblProvincia" Grid.Column="1" Grid.Row="1" Content="Provincia" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtProvincia" Grid.Column="1" Grid.Row="2" MinHeight="17" MinWidth="120" Margin="5,5,5,5" TextWrapping="Wrap" MaxLength="25"/>
+                    <TextBox x:Name="txtProvincia" Grid.Column="1" Grid.Row="2" MinHeight="17" MinWidth="120" Margin="5,5,5,5" TextWrapping="Wrap" MaxLength="25" PreviewTextInput="txtProvincia_PreviewTextInput"/>
                     <Label x:Name="lblHora" Grid.Column="1" Grid.Row="3" Content="Hora" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     <TextBox x:Name="txtHora" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="5"/>
                     <Label x:Name="lblTiempo" Grid.Column="1" Grid.Row="5" Content="Tiempo de duración" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtTiempo" Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="8"/>
+                    <TextBox x:Name="txtTiempo" Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="8" PreviewTextInput="txtTiempo_PreviewTextInput" LostFocus="txtTiempo_LostFocus"/>
                     <Label x:Name="lblFecha" Grid.Column="1" Grid.Row="7" Content="Fecha" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     <DatePicker x:Name="txtFecha" Grid.Column="1" Grid.Row="8" MinHeight="20" MinWidth="120" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                     <Label x:Name="lblGuia" Grid.Column="1" Grid.Row="9" Content="Guia asignado" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtGuia" Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25"/>
+                    <TextBox x:Name="txtGuia" Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtGuia_PreviewTextInput"/>
 
                     <Label x:Name="lblOrigen" Grid.Column="3" Grid.Row="1" Content="Origen" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtOrigen" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25"/>
+                    <TextBox x:Name="txtOrigen" Grid.Column="3" Grid.Row="2" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtOrigen_PreviewTextInput"/>
                     <Label x:Name="lblDestino" Grid.Column="3" Grid.Row="3" Content="Destino" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtDestino" Grid.Column="3" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25"/>
+                    <TextBox x:Name="txtDestino" Grid.Column="3" Grid.Row="4" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtDestino_PreviewTextInput"/>
                     <Label x:Name="lblNivelDificultad" Grid.Column="3" Grid.Row="5" Content="Nivel de dificultad" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtNivelDificultad" Grid.Column="3" Grid.Row="6" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="1"/>
+                    <TextBox x:Name="txtNivelDificultad" Grid.Column="3" Grid.Row="6" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="1" PreviewTextInput="txtNivelDificultad_PreviewTextInput"/>
                     <Label x:Name="lblComida" Grid.Column="3" Grid.Row="7" Content="Comida" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtComida" Grid.Column="3" Grid.Row="8" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25"/>
+                    <TextBox x:Name="txtComida" Grid.Column="3" Grid.Row="8" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtComida_PreviewTextInput"/>
                     <Label x:Name="lblMaterial" Grid.Column="3" Grid.Row="9" Content="Material necesario" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-                    <TextBox x:Name="txtMaterial" Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="50"/>
+                    <TextBox x:Name="txtMaterial" Grid.Column="3" Grid.Row="10" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="50" PreviewTextInput="txtMaterial_PreviewTextInput"/>
 
 
                     <Label x:Name="lblExcursionistas" Grid.Column="5" Grid.Row="1" Content="Excursionistas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>

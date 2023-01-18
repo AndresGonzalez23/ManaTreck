@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -192,6 +193,131 @@ namespace Laboratorio_IPO.Presentación
 					MessageBox.Show("El nombre ya existe o falta por rellenar algun campo", "Error al añadir");
 				}
 			}
+		}
+
+		private void txtNombre_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtNombre.BorderBrush = Brushes.Green;
+                txtNombre.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtNombre.BorderBrush = Brushes.Red;
+                txtNombre.Background = Brushes.LightCoral;
+            }
+        }
+
+		private void txtApellido_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtApellido.BorderBrush = Brushes.Green;
+                txtApellido.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtApellido.BorderBrush = Brushes.Red;
+                txtApellido.Background = Brushes.LightCoral;
+            }
+        }
+
+		private void txtCorreo_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13 || ascci == 64)
+            {
+                e.Handled = false;
+                txtCorreo.BorderBrush = Brushes.Green;
+                txtCorreo.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtCorreo.BorderBrush = Brushes.Red;
+                txtCorreo.Background = Brushes.LightCoral;
+            }
+        }
+
+		private void txtEdad_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (ascci >= 48 && ascci <= 57 || ascci == 13)
+            {
+                e.Handled = false;
+                txtEdad.BorderBrush = Brushes.Green;
+                txtEdad.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtEdad.BorderBrush = Brushes.Red;
+                txtEdad.Background = Brushes.LightCoral;
+            }
+        }
+
+		private void txttelefono_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+			int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+			if (ascci >= 48 && ascci <= 57 || ascci == 13)
+			{
+				e.Handled = false;
+				txttelefono.BorderBrush = Brushes.Green;
+				txttelefono.Background = Brushes.LightGreen;
+			}
+			else
+			{
+				e.Handled = true;
+				txttelefono.BorderBrush = Brushes.Red;
+				txttelefono.Background = Brushes.LightCoral;
+			}
+		}
+
+        public static bool ComprobarFormatoEmail(string sEmailAComprobar)
+        {
+            String sFormato;
+            sFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(sEmailAComprobar, sFormato))
+            {
+                if (Regex.Replace(sEmailAComprobar, sFormato, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+		private void txtCorreo_LostFocus(object sender, RoutedEventArgs e)
+		{
+			if (ComprobarFormatoEmail(txtCorreo.Text) == true)
+			{
+                e.Handled = false;
+                txtCorreo.BorderBrush = Brushes.Green;
+                txtCorreo.Background = Brushes.LightGreen;
+			}
+			else
+			{
+                e.Handled = true;
+                txtCorreo.BorderBrush = Brushes.Red;
+                txtCorreo.Background = Brushes.LightCoral;
+                MessageBox.Show("Formato invadilo, use un formato de correo electronico valido como nombre@gmail.com", "Error de formato");
+            }
 		}
 	}
 }

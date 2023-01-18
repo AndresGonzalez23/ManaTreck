@@ -66,18 +66,18 @@
         </ListView>
 
         <Label x:Name="lblNombre" Grid.Column="1" Grid.Row="1" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtNombre" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17" MaxLength="25"/>
+        <TextBox x:Name="txtNombre" Grid.Column="1" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap"  MinWidth="120" MinHeight="17" MaxLength="25" PreviewTextInput="txtNombre_PreviewTextInput"/>
         <Label x:Name="lblTelefono" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Teléfono" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <TextBox x:Name="txtTelefono" Grid.Column="1" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="9"/>
         <Label x:Name="lblDisponibilidad" Grid.Column="1" Grid.Row="5" Content="Disponibilidad" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <ComboBox x:Name="txtDisponibilidad" Grid.Column="1" Grid.Row="6" MinHeight="20" MinWidth="120" Margin="5,5,5,5"/>
         <Label x:Name="lblRating" Grid.Column="1" Grid.Row="7" Content="Valoración" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtRating" Grid.Column="1" Grid.Row="8" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="25"/>
+        <TextBox x:Name="txtRating" Grid.Column="1" Grid.Row="8" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="1" PreviewTextInput="txtRating_PreviewTextInput"/>
 
         <Label x:Name="lblApellido" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Apellido" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtApellido" Grid.Column="3" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="25"/>
+        <TextBox x:Name="txtApellido" Grid.Column="3" Grid.Row="2" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" MaxLength="25" PreviewTextInput="txtApellido_PreviewTextInput"/>
         <Label x:Name="lblCorreo" Grid.Column="3" Grid.Row="3" Content="Correo Electrónico" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="txtCorreo" Grid.Column="3" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17"/>
+        <TextBox x:Name="txtCorreo" Grid.Column="3" Grid.Row="4" Margin="5,5,5,5" TextWrapping="Wrap" MinWidth="120" MinHeight="17" PreviewTextInput="txtCorreo_PreviewTextInput" LostFocus="txtCorreo_LostFocus"/>
         <Label x:Name="lblIdiomas" Grid.Column="3" Grid.Row="5" Content="Idiomas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
         <ComboBox x:Name="txtIdiomas" Grid.Column="3" Grid.Row="6" MinHeight="20" MinWidth="120" Margin="5,5,5,5"/>
 

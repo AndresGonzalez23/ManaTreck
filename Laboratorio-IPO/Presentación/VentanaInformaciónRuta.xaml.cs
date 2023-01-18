@@ -140,7 +140,22 @@ namespace Laboratorio_IPO.Presentación
                 txtMaterial.Background = Brushes.LightCoral;
             }
         }
-
+        private void txtVuelta_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtGuia.BorderBrush = Brushes.Green;
+                txtGuia.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtGuia.BorderBrush = Brushes.Red;
+                txtGuia.Background = Brushes.LightCoral;
+            }
+        }
         private void txtGuia_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
@@ -175,7 +190,22 @@ namespace Laboratorio_IPO.Presentación
                 txtNivelDificultad.Background = Brushes.LightCoral;
             }
         }
-
+        private void txtVueltaR_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtGuia.BorderBrush = Brushes.Green;
+                txtGuia.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtGuia.BorderBrush = Brushes.Red;
+                txtGuia.Background = Brushes.LightCoral;
+            }
+        }
         private void txtTiempo_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
@@ -193,7 +223,38 @@ namespace Laboratorio_IPO.Presentación
                 txtTiempo.Background = Brushes.LightCoral;
             }
         }
-
+        private void txtAcceso_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtGuia.BorderBrush = Brushes.Green;
+                txtGuia.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtGuia.BorderBrush = Brushes.Red;
+                txtGuia.Background = Brushes.LightCoral;
+            }
+        }
+        private void txtAccesoR_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13)
+            {
+                e.Handled = false;
+                txtGuia.BorderBrush = Brushes.Green;
+                txtGuia.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                e.Handled = true;
+                txtGuia.BorderBrush = Brushes.Red;
+                txtGuia.Background = Brushes.LightCoral;
+            }
+        }
         private void txtTiempo_LostFocus(object sender, RoutedEventArgs e) {
             if(comprobarFormatoHora(txtTiempo.Text) == true)
             {

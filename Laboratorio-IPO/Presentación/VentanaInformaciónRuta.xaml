@@ -73,8 +73,21 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+
+                    <Button x:Name="btnLimpiar" Grid.Column="5" Grid.Row="13" Content="Limpiar"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="White" Width="74" Height="25" Click="btnLimpiar_Click"/>
+                    
                     <Image x:Name="imgRuta" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="7" Margin="10,0,0,20"  MaxWidth="250" MaxHeight="150"/>
                     <Button x:Name="btnPDI" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,30,0,0" Click="btnPDI_Click"/>
+                    <ListView x:Name="lstProximasExcursiones" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="btnBorrar" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74"/>
+                    <Button x:Name="btnAñadir" Grid.Column="6" Grid.Row="13" Content="Añadir" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="25" Width="74"/>
+
 
                 </Grid>
 
@@ -120,6 +133,8 @@
                     <TextBox x:Name="txtGuiaR" Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" IsEnabled="False"/>
                     <Label x:Name="lblAccesoR" Grid.Column="1" Grid.Row="10" Content="Forma de acceso" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     <TextBox x:Name="txtAccesoR" Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtAccesoR_PreviewTextInput" IsEnabled="False"/>
+                    <Label x:Name="lblIncidencias" Grid.Column="1" Grid.Row="12" Content="Incidencias" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Margin="5,0,0,0"/>
+                    <TextBox x:Name="txtIncidencias" Grid.Column="1" Grid.Row="13" MinHeight="40" MinWidth="140" AcceptsReturn="True" TextWrapping="Wrap" Margin="5,0,5,30"/>
 
                     <Label x:Name="lblOrigenR" Grid.Column="3" Grid.Row="0" Content="Origen" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     <TextBox x:Name="txtOrigenR" Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" IsEnabled="False"/>
@@ -143,10 +158,19 @@
                         </ListView.View>
                     </ListView>
 
+                    <Button x:Name="btnLimpiarR" Grid.Column="5" Grid.Row="13" Content="Limpiar"  HorizontalAlignment="Right" VerticalAlignment="Center" Background="White" Width="74" Height="25" Click="btnLimpiarR_Click"/>
+                    
                     <Image x:Name="imgRutaR" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5"/>
                     <Button x:Name="btnPDIR" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,30,0,0" Click="btnPDIR_Click"/>
-                    <Label x:Name="lblIncidencias" Grid.Column="1" Grid.Row="12" Content="Incidencias" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Margin="5,0,0,0"/>
-                    <TextBox x:Name="txtIncidencias" Grid.Column="1" Grid.Row="13" MinHeight="40" MinWidth="140" AcceptsReturn="True" TextWrapping="Wrap" Margin="5,0,5,30"/>
+                    <ListView x:Name="lstExcursionesRealizadas" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="btnBorrarR" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74"/>
+                    <Button x:Name="btnAñadirR" Grid.Column="6" Grid.Row="13" Content="Añadir" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="25" Width="74"/>
 
                 </Grid>
             </TabItem>

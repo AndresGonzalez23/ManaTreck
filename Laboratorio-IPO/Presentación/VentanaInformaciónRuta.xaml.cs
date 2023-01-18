@@ -306,5 +306,36 @@ namespace Laboratorio_IPO.Presentación
             VentanaPDI ventanaPDI = new VentanaPDI();
             ventanaPDI.Visibility = Visibility.Visible;
         }
+
+        private void btnLimpiarR_Click(object sender, RoutedEventArgs e)
+        {
+            txtProvinciaR.Clear();
+            txtOrigenR.Clear();
+            txtHoraR.Clear();
+            txtDestinoR.Clear();
+            txtTiempoR.Clear();
+            txtNivelDificultadR.Clear();
+            txtComidaR.Clear();
+            txtGuiaR.Clear();
+            txtMaterialR.Clear();
+            txtAccesoR.Clear();
+            txtVueltaR.Clear();
+            txtIncidencias.Clear();
+        }
+
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtProvincia.Clear();
+            txtOrigen.Clear();
+            txtHora.Clear();
+            txtDestino.Clear();
+            txtTiempo.Clear();
+            txtNivelDificultad.Clear();
+            txtComida.Clear();
+            txtGuia.Clear();
+            txtMaterial.Clear();
+            txtAcceso.Clear();
+            txtVuelta.Clear();
+        }
     }
 }

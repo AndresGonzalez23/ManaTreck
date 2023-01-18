@@ -30,7 +30,8 @@
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="lstExcursionistas" Grid.Column="4" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="9" MinWidth="160" Margin="26,43,0,5" SelectionChanged="lstExcursionistas_SelectionChanged" ScrollViewer.CanContentScroll="True" Height="354" ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+        <ListView x:Name="lstExcursionistas" Grid.Column="4" Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="8" MinWidth="160" Margin="26,5,0,0" VerticalAlignment="Top" SelectionChanged="lstExcursionistas_SelectionChanged" ScrollViewer.CanContentScroll="True" Height="355" ScrollViewer.VerticalScrollBarVisibility="Auto" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

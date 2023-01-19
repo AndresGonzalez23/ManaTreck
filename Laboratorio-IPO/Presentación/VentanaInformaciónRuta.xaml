@@ -54,7 +54,7 @@
 
                     <Label x:Name="lblGuia" Grid.Column="3" Grid.Row="0" Content="Guia asignado" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" FontSize="14" FontWeight="Bold"/>
                     <TextBox x:Name="txtGuia" Grid.Column="3" Grid.Row="1" TextWrapping="Wrap" MinHeight="17" MinWidth="100" MaxWidth="150" HorizontalAlignment="Left" Margin="5,5,5,5" MaxLength="25" PreviewTextInput="txtGuia_PreviewTextInput" FontSize="14"/>
-                    <Button x:Name="btnIraGuias" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="123,0,0,0" MinHeight="5" MinWidth="40" ToolTip="Ver Guia Aasignado" Height="40">
+                    <Button x:Name="btnIraGuias" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="123,0,0,0" MinHeight="5" MinWidth="40" ToolTip="Ver Guia Aasignado" Height="40" Click="btnIraGuias_Click_1">
                         <StackPanel Orientation="Horizontal">
                             <Image x:Name="imgGuias" Source="/Imagenes/guia-turistico.png" MaxWidth="40" MaxHeight="40" Width="30"/>
 

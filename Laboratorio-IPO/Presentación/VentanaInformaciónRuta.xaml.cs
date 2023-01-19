@@ -590,7 +590,27 @@ namespace Laboratorio_IPO.Presentación
 
         private void btnIraGuias_Click(object sender, RoutedEventArgs e)
         {
+            bool existe = false;
+            foreach (Guia x in Guia.todosGuias) { 
+                if(txtGuia.Text.Equals(x.Nombre)) { existe = true; }
+            }
+            if (existe)
+            {
+                ventanaPadre.seleccionGuiaEspecifico(txtGuia.Text);
+            }
+		}
 
-        }
-    }
+		private void btnIraGuias_Click_1(object sender, RoutedEventArgs e)
+		{
+			bool existe = false;
+			foreach (Guia x in Guia.todosGuias)
+			{
+				if (txtGuia.Text.Equals(x.Nombre)) { existe = true; }
+			}
+			if (existe)
+			{
+				ventanaPadre.seleccionGuiaEspecifico(txtGuia.Text);
+			}
+		}
+	}
 }

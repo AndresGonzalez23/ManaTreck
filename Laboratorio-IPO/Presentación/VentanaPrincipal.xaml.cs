@@ -86,5 +86,11 @@ namespace Laboratorio_IPO.Presentación
 			VentanaInfoExcursionistas aux = (VentanaInfoExcursionistas)paginas[1];
 			aux.seleccionExcursionistaEspecifico(seleccionado);
 		}
+		public void seleccionGuiaEspecifico(String seleccionado)
+		{
+			MainFrame.Content = paginas[2];
+			VentanaInfoGuias aux = (VentanaInfoGuias)paginas[2];
+			aux.seleccionGuiaEspecifico(seleccionado);
+		}
 	}
 }

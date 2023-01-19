@@ -1,4 +1,5 @@
-﻿using Laboratorio_IPO.Presentación;
+﻿using Laboratorio_IPO.Dominio;
+using Laboratorio_IPO.Presentación;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,5 +80,11 @@ namespace Laboratorio_IPO.Presentación
             PaginaRutas aux=(PaginaRutas)paginas[0];
             aux.seleccionRutaEspecifica(ruta, realizada);
 		}
-    }
+		public void seleccionExcursionistaEspecifico(String seleccionado)
+		{
+			MainFrame.Content = paginas[1];
+			VentanaInfoExcursionistas aux = (VentanaInfoExcursionistas)paginas[1];
+			aux.seleccionExcursionistaEspecifico(seleccionado);
+		}
+	}
 }

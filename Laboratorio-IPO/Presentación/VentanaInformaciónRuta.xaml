@@ -66,7 +66,7 @@
                     <TextBox x:Name="txtVuelta" Grid.Column="3" Grid.Row="11" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="50" PreviewTextInput="txtVuelta_PreviewTextInput"/>
 
                     <Label x:Name="lblExcursionistas" Grid.Column="4" Grid.Row="0" Content="Excursionistas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Margin="18,0,0,0"/>
-                    <ListView x:Name="lstExcursionistas" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="11" Margin="18,5,3,5" Grid.ColumnSpan="2">
+                    <ListView x:Name="lstExcursionistas" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="11" Margin="18,5,3,5" Grid.ColumnSpan="2" SelectionChanged="lstExcursionistas_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
@@ -150,7 +150,7 @@
                     <TextBox x:Name="txtVueltaR" Grid.Column="3" Grid.Row="11" TextWrapping="Wrap" MinHeight="17" MinWidth="120" Margin="5,5,5,5" MaxLength="50" PreviewTextInput="txtVueltaR_PreviewTextInput" IsEnabled="False"/>
 
                     <Label x:Name="lblExcursionistasR" Grid.Column="4" Grid.Row="0" Content="Excursionistas" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Margin="18,0,0,0"/>
-                    <ListView x:Name="lstExcursionistasR" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="11" Margin="18,5,3,5" Grid.ColumnSpan="2">
+                    <ListView x:Name="lstExcursionistasR" Grid.Column="4" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=10}" Grid.RowSpan="11" Margin="18,5,3,5" Grid.ColumnSpan="2" SelectionChanged="lstExcursionistasR_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>

@@ -24,10 +24,12 @@ namespace Laboratorio_IPO.Presentación
     public partial class VentanaInformaciónRuta : Page
     {
         private Ruta ruta;
-        public VentanaInformaciónRuta(string r)
+        private VentanaPrincipal ventanaPadre;
+        public VentanaInformaciónRuta(string r, VentanaPrincipal ventana)
         {
             InitializeComponent();
             //Ruta ruta=null;
+            ventanaPadre=ventana;
 			foreach (Ruta aux in Ruta.todosRutas)
 			{
 				if (r.Equals(aux.Nombre))
@@ -327,13 +329,13 @@ namespace Laboratorio_IPO.Presentación
 
         private void btnPDIR_Click(object sender, RoutedEventArgs e)
         {
-            VentanaPDI ventanaPDI = new VentanaPDI();
+            VentanaPDI ventanaPDI = new VentanaPDI(ruta.Nombre);
             ventanaPDI.Visibility = Visibility.Visible;
         }
 
         private void btnPDI_Click(object sender, RoutedEventArgs e)
         {
-            VentanaPDI ventanaPDI = new VentanaPDI();
+            VentanaPDI ventanaPDI = new VentanaPDI(ruta.Nombre);
             ventanaPDI.Visibility = Visibility.Visible;
         }
 
@@ -525,7 +527,7 @@ namespace Laboratorio_IPO.Presentación
 				}
 				else
 				{
-					MessageBox.Show(" Falta por rellenar algun campo/n El formato no es correcto/n El guia no existe", "Error al añadir");
+					MessageBox.Show(" Falta por rellenar algun campo\n El formato no es correcto\n El guia no existe", "Error al añadir");
 				}
 			}
 		}
@@ -563,6 +565,24 @@ namespace Laboratorio_IPO.Presentación
 					txtIncidencias.Clear();
 				}
 			}
+		}
+
+		private void lstExcursionistas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (lstExcursionistas.SelectedItem != null)
+			{
+				ventanaPadre.seleccionExcursionistaEspecifico(lstExcursionistas.SelectedItem.ToString());
+			}
+			lstExcursionistas.UnselectAll();
+		}
+
+		private void lstExcursionistasR_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (lstExcursionistasR.SelectedItem != null)
+			{
+				ventanaPadre.seleccionExcursionistaEspecifico(lstExcursionistasR.SelectedItem.ToString());
+			}
+			lstExcursionistasR.UnselectAll();
 		}
 	}
 }

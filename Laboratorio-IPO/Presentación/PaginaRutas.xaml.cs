@@ -41,7 +41,7 @@ namespace Laboratorio_IPO.Presentación
 			lbl5.Content = Ruta.todosRutas[4].Nombre;
 			lbl6.Content = Ruta.todosRutas[5].Nombre;
             for (int i=0;i<Ruta.todosRutas.Count;i++) {
-                paginasRutas[i] = new VentanaInformaciónRuta(Ruta.todosRutas[i].Nombre);
+                paginasRutas[i] = new VentanaInformaciónRuta(Ruta.todosRutas[i].Nombre,ventana);
             }
 		}
 

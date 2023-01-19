@@ -319,5 +319,8 @@ namespace Laboratorio_IPO.Presentación
                 MessageBox.Show("Formato invadilo, use un formato de correo electronico valido como nombre@gmail.com", "Error de formato");
             }
 		}
+		public void seleccionExcursionistaEspecifico(string seleccionado) {
+			lstExcursionistas.SelectedItem=seleccionado;
+		}
 	}
 }

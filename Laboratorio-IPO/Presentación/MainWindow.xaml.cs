@@ -17,6 +17,7 @@ using System.Xml;
 using Laboratorio_IPO.Dominio;
 using System.IO;
 using System.Reflection;
+using System.Xml.Linq;
 
 namespace Laboratorio_IPO.Presentación
 {
@@ -172,7 +173,7 @@ namespace Laboratorio_IPO.Presentación
                 }
                 String[] p = node.Attributes["pdi"].Value.Split(',');
                 puntInter=new PDI[p.Length];
-                for(int i = 0; i==p.Length ; i++){
+                for(int i = 0; i<p.Length ; i++){
                     puntInter[i]=new PDI(p[i].Trim(), node.Attributes["Nombre"].Value);
 					PDI.todosPDIs.Add(puntInter[i]);
 				}
@@ -184,18 +185,7 @@ namespace Laboratorio_IPO.Presentación
 			doc.Load(fichero.Stream);
 			foreach (XmlNode node in doc.DocumentElement.ChildNodes)
 			{
-				if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpg"))
-				{
-					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpg";
-				}
-				else if (File.Exists(@"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpeg"))
-				{
-					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".jpeg";
-				}
-				else
-				{
-					foto = @"..\..\Persistencia\PDI\" + node.Attributes["Nombre"].Value + ".png";
-				}
+				foto = "";
 				foreach (PDI p in PDI.todosPDIs)
 				{
 					if (p.Nombre.Equals(node.Attributes["Nombre"].Value)&&p.Foto.Equals(node.Attributes["Ruta"].Value))
@@ -235,6 +225,25 @@ namespace Laboratorio_IPO.Presentación
 				}
 				Excursionista nuevoExcur = new Excursionista(node.Attributes["Nombre"].Value, node.Attributes["Apellidos"].Value, foto, Convert.ToInt32(node.Attributes["Edad"].Value), long.Parse(node.Attributes["Telefono"].Value),excursiones, node.Attributes["Correo"].Value);
 				Excursionista.todosExcursionistas.Add(nuevoExcur);
+			}
+			foreach (Ruta x in Ruta.todosRutas) {
+				int i = 1;
+				foreach (PDI y in x.Pdi) {
+					if (File.Exists(@"..\..\Persistencia\PDI\" + x.Nombre +i.ToString()+ ".jpg"))
+					{
+						foto = @"..\..\Persistencia\PDI\" + x.Nombre + i.ToString() + ".jpg";
+					}
+					else if (File.Exists(@"..\..\Persistencia\PDI\" + x.Nombre + i.ToString() + ".jpeg"))
+					{
+						foto = @"..\..\Persistencia\PDI\" + x.Nombre + i.ToString() + ".jpeg";
+					}
+					else
+					{
+						foto = @"..\..\Persistencia\PDI\" + x.Nombre + i.ToString() + ".png";
+					}
+					i++;
+					y.Foto= foto;
+				}
 			}
 		}
 

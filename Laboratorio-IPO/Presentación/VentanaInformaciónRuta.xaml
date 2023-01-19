@@ -165,8 +165,8 @@
                         </ListView.View>
                     </ListView>
 
-                    <Image x:Name="imgRutaR" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5"/>
-                    <Button x:Name="btnPDIR" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,30,0,0" Click="btnPDIR_Click"/>
+                    <Image x:Name="imgRutaR" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="7" Width="250" MaxHeight="150"/>
+                    <Button x:Name="btnPDIR" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,80,0,0" Click="btnPDIR_Click"/>
                     <ListView x:Name="lstExcursionesRealizadas" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300" SelectionChanged="lstExcursionesRealizadas_SelectionChanged">
                         <ListView.View>
                             <GridView>

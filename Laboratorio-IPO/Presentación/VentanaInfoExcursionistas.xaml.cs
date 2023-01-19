@@ -232,7 +232,7 @@ namespace Laboratorio_IPO.Presentación
 		private void txtCorreo_PreviewTextInput(object sender, TextCompositionEventArgs e)
 		{
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
-            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13 || ascci == 64)
+            if (ascci >= 65 && ascci <= 90 || ascci >= 97 && ascci <= 122 || ascci == 44 || ascci == 45 || ascci == 13 || ascci == 64 || ascci==46)
             {
                 e.Handled = false;
                 txtCorreo.BorderBrush = Brushes.Green;

@@ -353,6 +353,7 @@ namespace Laboratorio_IPO.Presentación
             txtAccesoR.Clear();
             txtVueltaR.Clear();
             txtIncidencias.Clear();
+            lstExcursionistasR.Items.Clear();
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
@@ -369,6 +370,7 @@ namespace Laboratorio_IPO.Presentación
             txtAcceso.Clear();
             txtVuelta.Clear();
             lstProximasExcursiones.UnselectAll();
+            lstExcursionistas.Items.Clear();
         }
 
 		private void lstProximasExcursiones_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -563,6 +565,7 @@ namespace Laboratorio_IPO.Presentación
 					txtAccesoR.Clear();
 					txtVueltaR.Clear();
 					txtIncidencias.Clear();
+                    lstExcursionistasR.Items.Clear();
 				}
 			}
 		}
@@ -584,5 +587,10 @@ namespace Laboratorio_IPO.Presentación
 			}
 			lstExcursionistasR.UnselectAll();
 		}
-	}
+
+        private void btnIraGuias_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }

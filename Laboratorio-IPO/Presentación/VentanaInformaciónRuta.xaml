@@ -78,15 +78,15 @@
                     
                     <Image x:Name="imgRuta" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="7" Margin="10,0,0,20"  MaxWidth="250" MaxHeight="150"/>
                     <Button x:Name="btnPDI" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,30,0,0" Click="btnPDI_Click"/>
-                    <ListView x:Name="lstProximasExcursiones" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300">
+                    <ListView x:Name="lstProximasExcursiones" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300" SelectionChanged="lstProximasExcursiones_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnBorrar" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74"/>
-                    <Button x:Name="btnAñadir" Grid.Column="6" Grid.Row="13" Content="Añadir" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="25" Width="74"/>
+                    <Button x:Name="btnBorrar" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74" Click="btnBorrar_Click"/>
+                    <Button x:Name="btnAñadir" Grid.Column="6" Grid.Row="13" Content="Añadir" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="25" Width="74" Click="btnAñadir_Click"/>
 
 
                 </Grid>
@@ -162,14 +162,14 @@
                     
                     <Image x:Name="imgRutaR" Grid.Column="6" Grid.Row="0" MinWidth="230" MinHeight="130" Source="/Imagenes/treriosruta.png" HorizontalAlignment="Center" Grid.RowSpan="7" Width="250" Margin="0,1,0,5"/>
                     <Button x:Name="btnPDIR" Grid.Column="6" Grid.Row="5" Content="Ver Puntos de Interes" HorizontalAlignment="Center"  VerticalAlignment="Bottom" MinHeight="27" MinWidth="190" Margin="0,30,0,0" Click="btnPDIR_Click"/>
-                    <ListView x:Name="lstExcursionesRealizadas" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300">
+                    <ListView x:Name="lstExcursionesRealizadas" Grid.Column="6" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,19,20,5" Grid.RowSpan="6" MinWidth="190" MaxWidth="300" SelectionChanged="lstExcursionesRealizadas_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn/>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnBorrarR" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74"/>
+                    <Button x:Name="btnBorrarR" Grid.Column="6" Grid.Row="13" Content="Eliminar" VerticalAlignment="Center" Margin="20,0,94,0" Background="White" Height="25" Width="74" Click="btnBorrarR_Click"/>
                     <Button x:Name="btnAñadirR" Grid.Column="6" Grid.Row="13" Content="Añadir" VerticalAlignment="Center"  Margin="114,0,0,0" Background="White" Height="25" Width="74"/>
 
                 </Grid>

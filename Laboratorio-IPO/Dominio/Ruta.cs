@@ -10,6 +10,8 @@ namespace Laboratorio_IPO.Dominio
 	internal class Ruta
 	{
 		public static List<Ruta> todosRutas=new List<Ruta>();
+		private List<Ruta> _realizadas = new List<Ruta>();
+		private List<Ruta> _proximas = new List<Ruta>();
 		private string _nombre;
 		private string _provincia;
 		private string _origen;
@@ -106,5 +108,7 @@ namespace Laboratorio_IPO.Dominio
 		internal Guia Guia { get => _guia; set => _guia = value; }
 		internal PDI[] Pdi { get => _pdi; set => _pdi = value; }
 		public string Mapa { get => _mapa; set => _mapa = value; }
+		internal List<Ruta> Realizadas { get => _realizadas; set => _realizadas = value; }
+		internal List<Ruta> Proximas { get => _proximas; set => _proximas = value; }
 	}
 }

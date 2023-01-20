@@ -557,7 +557,7 @@ namespace Laboratorio_IPO.Presentación
                         select = aux;
                     }
                 }
-                if (txtProvincia.Text != "" && txtOrigen.Text != "" && txtDestino.Text != "" && txtHora.Text != "" && txtTiempo.Text != "" && txtNivelDificultad.Text != "" && (txtComida.Text != "" || txtComida.Text != "true" || txtComida.Text != "false") && txtFecha.Text != "" && txtGuia.Text != "" && txtMaterial.Text != "" && txtAcceso.Text != "" && txtVuelta.Text != "" && exisguia)
+                if (txtProvincia.Text != "" && txtOrigen.Text != "" && txtDestino.Text != "" && txtHora.Text != "" && txtTiempo.Text != "" && txtNivelDificultad.Text != "" && txtComida.Text != "" && (txtComida.Text == "true" || txtComida.Text == "false") && txtFecha.Text != "" && txtGuia.Text != "" && txtMaterial.Text != "" && txtAcceso.Text != "" && txtVuelta.Text != "" && exisguia)
                 {
                     Ruta nuevaruta = new Ruta(ruta.Proximas.Count.ToString(), txtProvincia.Text, txtOrigen.Text, txtDestino.Text, txtTiempo.Text, txtFecha.Text + "/" + txtHora.Text, Convert.ToInt32(txtNivelDificultad.Text), select, 10, txtAcceso.Text, txtVuelta.Text, txtMaterial.Text, Convert.ToBoolean(txtComida.Text), ruta.Pdi, ruta.Foto, ruta.Mapa);
                     ruta.Proximas.Add(nuevaruta);

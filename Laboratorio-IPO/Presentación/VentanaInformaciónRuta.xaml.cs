@@ -362,6 +362,7 @@ namespace Laboratorio_IPO.Presentación
             txtVueltaR.Clear();
             txtIncidencias.Clear();
             lstExcursionistasR.Items.Clear();
+            
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
@@ -379,6 +380,28 @@ namespace Laboratorio_IPO.Presentación
             txtVuelta.Clear();
             lstProximasExcursiones.UnselectAll();
             lstExcursionistas.Items.Clear();
+            txtProvincia.BorderBrush = Brushes.White;
+            txtProvincia.Background = Brushes.White;
+            txtOrigen.BorderBrush = Brushes.White;
+            txtOrigen.Background = Brushes.White;
+            txtHora.BorderBrush = Brushes.White;
+            txtHora.Background = Brushes.White;
+            txtDestino.BorderBrush = Brushes.White;
+            txtDestino.Background = Brushes.White;
+            txtTiempo.BorderBrush = Brushes.White;
+            txtTiempo.Background = Brushes.White;
+            txtNivelDificultad.BorderBrush = Brushes.White;
+            txtNivelDificultad.Background = Brushes.White;
+            txtComida.BorderBrush = Brushes.White;
+            txtComida.Background = Brushes.White;
+            txtGuia.BorderBrush = Brushes.White;
+            txtGuia.Background = Brushes.White;
+            txtMaterial.BorderBrush = Brushes.White;
+            txtMaterial.Background = Brushes.White;
+            txtAcceso.BorderBrush = Brushes.White;
+            txtAcceso.Background = Brushes.White;
+            txtVuelta.BorderBrush = Brushes.White;
+            txtVuelta.Background = Brushes.White;
         }
 
         private void lstProximasExcursiones_SelectionChanged(object sender, SelectionChangedEventArgs e)

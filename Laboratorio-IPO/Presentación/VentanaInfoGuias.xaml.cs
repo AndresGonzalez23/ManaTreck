@@ -162,6 +162,17 @@ namespace Laboratorio_IPO.Presentación
             txtCorreo.IsEnabled = true;
             txtRating.IsEnabled = true;
             txtTelefono.IsEnabled = true;
+            btnEliminar.IsEnabled = false;
+            txtNombre.BorderBrush = Brushes.White;
+            txtNombre.Background = Brushes.White;
+            txtApellido.BorderBrush = Brushes.White;
+            txtApellido.Background = Brushes.White;
+            txtTelefono.BorderBrush = Brushes.White;
+            txtTelefono.Background = Brushes.White;
+            txtCorreo.BorderBrush = Brushes.White;
+            txtCorreo.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
@@ -187,6 +198,16 @@ namespace Laboratorio_IPO.Presentación
                 }
             }
             btnEliminar.IsEnabled = false;
+            txtNombre.BorderBrush = Brushes.White;
+            txtNombre.Background = Brushes.White;
+            txtApellido.BorderBrush = Brushes.White;
+            txtApellido.Background = Brushes.White;
+            txtTelefono.BorderBrush = Brushes.White;
+            txtTelefono.Background = Brushes.White;
+            txtCorreo.BorderBrush = Brushes.White;
+            txtCorreo.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
         }
 
         private void btnAñadir_Click(object sender, RoutedEventArgs e)
@@ -214,6 +235,16 @@ namespace Laboratorio_IPO.Presentación
                     MessageBox.Show("El nombre ya existe o falta por rellenar algun campo", "Error al añadir");
                 }
             }
+            txtNombre.BorderBrush = Brushes.White;
+            txtNombre.Background = Brushes.White;
+            txtApellido.BorderBrush = Brushes.White;
+            txtApellido.Background = Brushes.White;
+            txtTelefono.BorderBrush = Brushes.White;
+            txtTelefono.Background = Brushes.White;
+            txtCorreo.BorderBrush = Brushes.White;
+            txtCorreo.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
+            txtRating.Background = Brushes.White;
         }
 
         private void txtNombre_PreviewTextInput(object sender, TextCompositionEventArgs e)
